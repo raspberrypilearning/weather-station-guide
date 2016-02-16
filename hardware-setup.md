@@ -106,7 +106,7 @@ The HAT has many sensors on the board, and several external sensors
 which connect to it. Details on each sensor and how to assemble can be
 found on the following pages:
 
-[Rain Gauge]() [Anemometer and Wind Vain]() [Temperature probe]()
+[Rain Gauge]() [Anemometer and Wind Vane]() [Temperature probe]()
 
 1.  There are three inputs on the Weather Station HAT, as shown in the
     image below.
@@ -213,7 +213,7 @@ Water-proofing the Control Unit connections.
 
 ![](images/Fit_Seal.jpg)
 
-1.  Repeat the previous steps for the wind vain.
+1.  Repeat the previous steps for the wind vane.
 
 2.  Connect the RJ11 cables to the Weather HAT.
 
@@ -229,6 +229,12 @@ TODO Air Sensor Grommet
 
 TODO Ethernet Grommet
 ---------------------
+The ethernet (network) cable has been deliberately left out of the kit because we simply don't know how and where you will site your weather station. 
+
+If you are able to make your own cables-or canget someone to do it for you-then this is best: you can use a smaller grommet (16mm)
+TOFINISH
+
+
 
 TODO Attaching Lid and Feet
 ---------------------------
