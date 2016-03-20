@@ -1,22 +1,25 @@
 # Raspberry Pi Weather Station
 
-The weather station kit is a HAT for the Raspberry Pi which allows it to collect environmental data from its surroundings using a variety of sensors. It is designed for use in school to enable students to create their own weather station an has a range of resources to support its use.
+The weather station kit is a HAT for the Raspberry Pi which allows it to collect weather data using a variety of sensors. It is designed for use in school to enable students to create their own weather station and has a range of resources to support its use.
 
-![Weather Station](images/weather-station-kit.jpg)
+As well as logging data locally, schools that received a free weather station can log their data to a central Oracle database so they can share and collaborate with schools round the world.
 
-## Setup
-- [Hardware Setup](hardware-setup.md)
-- [Software Setup](software-setup.md)
-- [Local Database Setup](database-setup.md)
-- [Oracle Database Setup](oracle.md)
-- [Siting the weather station](siting.md)
-- [Creating a Stevenson Screen](stevenson.md)
 
-## The Sensors
-- [Rain Gauge](rain-gauge.md)
+![Weather Station](images/weather-station-kit.png)
+
+## How to set up your weather station
+1. [Put the kit together](hardware-setup.md)
+1. [Set up the software](software-setup.md)
+1. [Set up the local database](database-setup.md)
+1. [Set up the Oracle database](oracle.md)
+1. [Install the weather station outside](siting.md)
+
+
+## Exploring the Sensors
+- [Rain gauge](rain-gauge.md)
 - [Anemometer](anemometer.md)
-- [Wind Vane](wind-vane.md)
-- [Temperature Probe](temp_probe.md)
-- [Onboard Air Sensors](onboard-sensors.md)
+- [Wind vane](wind-vane.md)
+- [Temperature probe](temp_probe.md)
+- [On-board air sensors](onboard-sensors.md)
 
 
