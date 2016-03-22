@@ -1,6 +1,6 @@
-# Sensor Name
+# Wind vane
 
-Here is the wind vane sensor supplied with the Raspberry Pi Weather Station kit
+Here is the wind vane sensor supplied with the Raspberry Pi Weather Station kit.
 
 ![Wind Vane](images/wind_vane.png)
 

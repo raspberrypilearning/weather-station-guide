@@ -19,8 +19,7 @@ As well as logging data locally, schools that received a free weather station ca
 - [Rain gauge](rain-gauge.md)
 - [Anemometer](anemometer.md)
 - [Wind vane](wind-vane.md)
-- [Temperature probe](temp_probe.md)
-- [On-board air sensors](onboard-sensors.md)
+- [Temperature probe](temp-probe.md)
 
 ## Resources
 - [Sensing the weather](https://github.com/raspberrypilearning/sensing-the-weather): a series of cross curricular lessons exploring measuring, collecting and analysing weather data in order to predict the weather.
