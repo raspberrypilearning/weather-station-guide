@@ -21,11 +21,11 @@ Mundane but important stuff
 2.  From the Menu button top left choose Preferences -> Raspberry Pi Configuration
 3.  Select "**Expand Filesystem**":
 
-    ![](images\expand-filesystem.png)
+    ![](images/expand-filesystem.png)
 1. While you're here we recommend that you **change your password** using the button underneath.   
 1. In the Interfaces tab enable I2C:
 
-    ![](images\i2c.png)
+    ![](images/i2c.png)
     
 1. A reboot dialogue will appear. Select "Yes". 
 
@@ -34,7 +34,7 @@ Setting up the Real Time Clock
 --------------------------------
 We'll be doing most of the work from the command line. Open a terminal window using the icon on the menu bar to access this:
 
-   ![](images\terminal.png) 
+   ![](images/terminal.png) 
 
 You'll now be at a prompt 
 ```
