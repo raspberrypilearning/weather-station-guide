@@ -29,3 +29,9 @@ One of the big ideas with the weather station is to allow users to upload their 
   `mv credentials.oracle.template credentials.oracle`
   
 ## Checking that data is received
+
+
+
+1. You can manually trigger an upload too with the following command:
+
+  `sudo ~/weather-station/upload_to_oracle.py`
