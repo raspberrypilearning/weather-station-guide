@@ -6,7 +6,7 @@ Mounting the Raspberry Pi
 
 1.  To assemble the weather station, you will first need to mount the
     Raspberry Pi on to an acrylic base. You will need the following
-    components and kit.
+    components and kit (see Appendix 1 for contents of bags).
 
     1.  Large acrylic base
     2.  Raspberry Pi 2
@@ -71,8 +71,8 @@ Providing Power and Network Connectivity.
     1.  Power over Ethernet (PoE) injector.
     2.  Power over Ethernet (PoE) splitter.
     3.  24V Transformer with international adaptors.
-    4.  A CAT5 cable, long enough to reach the area you wish to place
-        the Weather Station. (**Not Supplied**)
+    4.  A CAT5 Ethernet cable, long enough to reach the area you wish to place
+        the Weather Station. (**Not supplied--see the Ethernet cable grommet section below.**)
 
     ![](images/Power_Kit.jpg)
 
@@ -94,7 +94,7 @@ Providing Power and Network Connectivity.
 
     ![](images/Power_Splitter.jpg)
 
-6.  Plugin the power adaptor and Ethernet cable to check that the Pi is
+6.  Plug in the power adaptor and Ethernet cable to check that the Pi is
     receiving power and connectivity.
 
     ![](images/Powered_Station.jpg)
@@ -103,10 +103,10 @@ Connecting the sensors
 ----------------------
 
 The HAT has many sensors on the board, and several external sensors
-which connect to it. Details on each sensor and how to assemble can be
+which connect to it. More details on each sensor and how they work be
 found on the following pages:
 
-[Rain Gauge]() [Anemometer and Wind Vane]() [Temperature probe]()
+[Rain Gauge](rain-gauge.md), [Anemometer](anemometer.md), [Wind Vane](wind-vane.md) and [Temperature probe](temp-probe.md)
 
 1.  There are three inputs on the Weather Station HAT, as shown in the
     image below.
@@ -228,12 +228,66 @@ Air Sensor Grommet
 -----------------------
 Connect and seal the air sensor grommet as per the rain sensor instructions above.
 
-Ethernet cable Grommet
+Ethernet Cable Grommet
 ---------------------
-The Ethernet (network) cable has been deliberately left out of the kit because we simply don't know how and where you will site your weather station. 
+The Ethernet (network) cable has been deliberately left out of the kit because we simply don't know how and where you will site your weather station: it may be close to router or it may be 50 metres away. There are two options for networking and sealing the weather station box: either use a ready-made Ethernet cable (known as a *patch cable*) or make your own.
 
-If you are able to make your own cables-or canget someone to do it for you-then this is best: you can use a smaller grommet (16mm)
-TOFINISH
+### Making your own network cable
+
+If you are able to make up your own network cable--or can get someone to do it for you--then this is best route. You can thread the smaller 16mm gland on to the cable before you crimp the network connector on to the cable. This way you will get the best seal and the length will also be perfect.
+
+### Using a patch cable
+
+The plastic connector of a patch cable is too big to go through the 16mm plastic sealing nut, as fitted to the rain and wind sensors. You will therefore have to use the larger 20mm sealing nut (gland). The size is marked "M20"on the collar. 
+
+![](\images\gland.jpg) 
+
+We tested a lot of cables and they all fitted through the 20mm gland with a bit of fiddling. You will have to take the gland apart first, as in the picture. In one case we had to trim the plastic of the network connector slightly with a knife. 
+
+The downside is that the 20mm gland is too big to seal properly on the cable. You will need to seal it as best you can with tape or rubber grommets or ingenuity to keep the elements out. 
+
+## Connecting the weather station to your network
+
+After testing and installing your weather station it will need to be connected to your network. This is one area where it is very hard to give specific instructions--every school, organisation and home is different. As well as physical differences in how a computer connects there are  potential issues with firewalls, proxies and other restrictions. Our advice is:
+
+- If you have a network/ICT technician at your school please get them involved in the project. 
+- If you don't have a technician, find out who is responsible for your network and get them involved in the project.
+- If you have questions or are stuck then visit our [Weather Station forum](https://www.raspberrypi.org/forums/viewforum.php?f=112).
+
+Of course, if you *are* the ICT technician or network manager then we would love you to share your experience and knowledge on [the forums](https://www.raspberrypi.org/forums/viewforum.php?f=112).
+
+## Finally...
+
+We made the weather station as an educational *kit* on purpose, so that teachers and students could explore computing, sensors, networking, databases and, of course, problem solving.
+
+If you get stuck or just want to share your experiences, [please come to the forums](https://www.raspberrypi.org/forums/viewforum.php?f=112) for a chat. Good luck and have fun!
+
+
+----------
+
 
 ## Appendix 1. Parts list
-The following parts are supplied with the free weather station kit:
+The contents of the plastic bags in the free weather station kit are as follows:
+
+**Board mounting kit packet**
+- Plastic Fixing nuts, 4
+- Plastic PCB spacers, 4
+- Plastic fixing screws, 4
+- CR1225 button battery
+- 6mm steel screws, 4
+- Receptacle (GPIO pin extender)
+- Hex spacer, 4
+
+**Enclosure kit packet**
+- 10mm screws 8
+- Sealing gland, M20mm x 1.5, 2
+- Gland, M16x1.5, 1
+- Sealing bushing (large), 2
+- 25mm sealing bushing, 2
+
+**External fixing kit packet**
+- Brackets with screws, plastic, 4
+- Screw covers
+- Rubber washers, 4
+- Self-tapping screws, 10
+
