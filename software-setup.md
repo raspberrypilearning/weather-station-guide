@@ -53,9 +53,9 @@ We've included an install script to set up the Real Time Clock automatically. Yo
 
 1. To run the script:
 
-    ```bash
-    ./weather-station/install.sh
-    ```
+```bash
+./weather-station/install.sh
+```
 
 **This will take some time** so please be patient. At some point it will ask you to confirm or set the time. When finished it will reboot automatically.
 
@@ -67,59 +67,59 @@ We've included an install script to set up the Real Time Clock automatically. Yo
 1.  First you want to make sure you have all the latest updates for your
     Raspberry Pi.
 
-    ``` {.bash}
+``` {.bash}
     sudo apt-get update && sudo apt-get upgrade
-    ```
+```
 
 1.  You now need make some changes to a config file to allow the
     Raspberry Pi to use the real-time clock.
 
-    ``` {.bash}
+``` {.bash}
     sudo nano /boot/config.txt
-    ```
+```
 
 Add the following lines to the bottom of the file:
 
-    ``` {.bash}
-    dtoverlay=w1-gpio
-    dtoverlay=pcf8523-rtc
-    ```
+```{.bash}
+dtoverlay=w1-gpio
+dtoverlay=pcf8523-rtc
+```
 
 Press \`Ctrl - O\` then \`Enter\` to save and \`Ctrl - X\` to quit nano.
 
 Now set the required modules to load automatically on boot.
 
-    ``` {.bash}
-    sudo nano /etc/modules
-    ```
+``` {.bash}
+sudo nano /etc/modules
+```
 
 Add the following lines to the bottom of the file:
 
-    ``` {.bash}
-    i2c-dev
-    w1-therm
-    ```
+``` {.bash}
+i2c-dev
+w1-therm
+```
 
 Press \`Ctrl - O\` then \`Enter\` to save and \`Ctrl - X\` to quit nano.
 
 1.  For the next steps we need the Weather Station hat to be connected
     to the Raspberry Pi.
 
-    ``` {.bash}
-    sudo halt
-    ```
+``` {.bash}
+sudo halt
+```
 
 1.  Reboot for the changes to take effect.
 
-    ``` {.bash}
-    sudo reboot
-    ```
+``` {.bash}
+sudo reboot
+```
 
 1.  Check that the Real Time Clock (RTC) appears in \`/dev\`
 
-    ``` {.bash}
-    ls /dev/rtc*
-    ```
+``` {.bash}
+ls /dev/rtc*
+```
 
 Expected result: `/dev/rtc0`
 
@@ -129,23 +129,23 @@ Use the \`date\` command to check the current system time is correct. If
 correct then you can set the RTC time from the system clock with the
 following command:
 
-    ``` {.bash}
-    sudo hwclock -w
-    ```
+``` {.bash}
+sudo hwclock -w
+```
 
 If not then you can set the RTC time manually using the command below
 (you'll need to change the \`--date\` parameter, this example will set
 the date to the 1st of January 2014 at midnight):
 
-   ``` {.bash}
-    sudo hwclock --set --date="yyyy-mm-dd hh:mm:ss" --utc
-   ```
+``` {.bash}
+sudo hwclock --set --date="yyyy-mm-dd hh:mm:ss" --utc
+```
 
 for example:
 
-    ``` {.bash}
-    sudo hwclock --set --date="2015-08-24 18:32:00" --utc
-    ```
+``` {.bash}
+sudo hwclock --set --date="2015-08-24 18:32:00" --utc
+```
 
 Then set the system clock from the RTC time
 
@@ -156,45 +156,45 @@ sudo hwclock -s
 1.  Enable setting the system clock automatically at boot time. First
     edit the hwclock udev rule:
 
-    ``` {.bash}
-    sudo nano /lib/udev/hwclock-set
-    ```
+``` {.bash}
+sudo nano /lib/udev/hwclock-set
+```
 
 Find the lines at the bottom that read:
 
-    ``` {.bash}
-    if [ yes = "$BADYEAR" ] ; then
-        /sbin/hwclock --rtc=$dev --systz --badyear
-    else
-        /sbin/hwclock --rtc=$dev --systz
-    fi
+``` {.bash}
+if [ yes = "$BADYEAR" ] ; then
+    /sbin/hwclock --rtc=$dev --systz --badyear
+else
+    /sbin/hwclock --rtc=$dev --systz
+fi
     ```
 
 Change the \`--systz\` options to \`--hctosys\` so that they read:
 
-    ``` {.bash}
-    if [ yes = "$BADYEAR" ] ; then
-        /sbin/hwclock --rtc=$dev --hctosys --badyear
-    else
-        /sbin/hwclock --rtc=$dev --hctosys
-    fi
+``` {.bash}
+if [ yes = "$BADYEAR" ] ; then
+    /sbin/hwclock --rtc=$dev --hctosys --badyear
+else
+    /sbin/hwclock --rtc=$dev --hctosys
+fi
     ```
 
 Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
 
 ### Remove the fake hardware clock package
 
-    ``` {.bash}
-    sudo update-rc.d fake-hwclock remove
-    sudo apt-get remove fake-hwclock -y
-    ```
+``` {.bash}
+sudo update-rc.d fake-hwclock remove
+sudo apt-get remove fake-hwclock -y
+```
 
 
 ### Install the necessary software packages
 
-    ``` {.bash}
-    sudo apt-get install i2c-tools python-smbus telnet -y
-    ```
+``` {.bash}
+sudo apt-get install i2c-tools python-smbus telnet -y
+```
 
 Testing the sensors
 -------------------
