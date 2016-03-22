@@ -1,6 +1,6 @@
 # The Rain Gauge
 
-Here is the rain gauge sensor supplied with the Raspberry Pi Weather Station kit
+Here is the rain gauge sensor supplied with the Raspberry Pi Weather Station kit.
 
 ![Rain Gauge](images/rain_gauge.jpg)
 
@@ -24,11 +24,11 @@ The top of the back wall does come off if you want to see inside; just pull on t
 
 ## How does the sensor connect?
 
-1. To connect the rain gauge to the weather station board you will need to first have set up the main [weather station box]()
+1. To connect the rain gauge to the weather station board you will need to first have set up the main [weather station box](hardware-setup.md)
 1. Locate the socket on the weather station board marked **RAIN SENSOR** and the corresponding grommet.
 1. Unscrew the grommet from the case and thread the rain gauge plug through to the inside of the box.
 
-  ![Connecting](rain_connect.jpeg)
+  ![Connecting](images\Fix_Grommit.jpg)
 
 1. Connect the plug to the socket, and tighten up the grommet.
 
@@ -36,9 +36,9 @@ The top of the back wall does come off if you want to see inside; just pull on t
 
 ## Sample Code
 
-The following program uses a GPIO interupt handler to detect input from the rain guage and convert it to a meaningful measurement which is displayed on screen.
+The following program uses a GPIO interrupt handler to detect input from the rain gauge and convert it to a meaningful measurement which is displayed on screen.
 
-  ```python
+```python
   #!/usr/bin/python
   import RPi.GPIO as GPIO
 

@@ -2,7 +2,7 @@
 
 This is the anemometer sensor supplied with the Raspberry Pi Weather Station kit. It is used to measure wind speed.
 
-![Anemometer](images/anemometer.jpg)
+![Anemometer](images/anemometer.png)
 
 ## How does it work?
 
@@ -21,7 +21,7 @@ Now use a screwdriver to remove the three screws on the bottom of the base. The 
 
 So what does this mean? When the blades/cups are in their original position and spinning, the magnet will rotate in a tight circle above the reed switch. So for every complete rotation there will be two moments when the switch is closed.
 
-If we can detect the number of rotations in a given time period we can calculate the speed at which the arms are spinning. As some energy is lost in the pushing of the cups an anemometer often under-reports the wind speed. To conpensate for this we will multiply our calculated speed by a factor of 1.18 (specific to this anemometer).
+If we can detect the number of rotations in a given time period we can calculate the speed at which the arms are spinning. As some energy is lost in the pushing of the cups an anemometer often under-reports the wind speed. To compensate for this we will multiply our calculated speed by a factor of 1.18 (specific to this anemometer).
 
 The following algorithm can be used to calculate wind speed.
 
@@ -40,12 +40,12 @@ The following algorithm can be used to calculate wind speed.
 
 ## How does the sensor connect?
 
-To connect the anemometer to the weather station board you will need to first have set up the main [weather station box]()
+To connect the anemometer to the weather station board you will need to first have set up the main [weather station box](hardware-setup.md)
 1. Locate the socket on the weather station board marked **WIND** and the corresponding grommet.
 2. The anemometer can be connected directly to the board, but ideally via the [wind_vane](wind_vane.md)
 1. Unscrew the grommet from the case and thread the wind vane plug through to the inside of the box.
 
-  ![Connecting](wind_connect.jpeg)
+  ![Connecting](images\Fix_Grommit.jpg)
 
 1. Connect the plug to the socket, and tighten up the grommet.
 
@@ -53,10 +53,10 @@ To connect the anemometer to the weather station board you will need to first ha
 
 ## Sample Code
 
-The following program uses a GPIO interupt handler to detect input from the anemometer and convert it to a meaningful measurement which is displayed on screen.
+The following program uses a GPIO interrupt handler to detect input from the anemometer and convert it to a meaningful measurement which is displayed on screen.
 
 ```python
-#!/usr/bin/python3
+
 import RPi.GPIO as GPIO
 import time, math
 
@@ -68,7 +68,7 @@ def calculate_speed(r_cm, time_sec):
     circ_cm = (2 * math.pi) * r_cm
     rot = count / 2.0
     dist_km = (circ_cm * rot) / 100000.0 # convert to kilometres
-    km_per_sec = dist_km / time_sec
+    km_per_sec = dist_km / time_sec
     km_per_hour = km_per_sec * 3600 # convert to distance per hour
     return km_per_hour
 

@@ -1,26 +1,21 @@
-# Air Temperature Probe
+# Soil Temperature Probe
 
-The Temperature sensor is integrated into the 
+The temperature sensor is integrated into a waterproof metal housing.
 
 ![Temperature probe](images/temperature.jpg)
 
-## How does it work?
-
-
-
 ## How does the sensor connect?
 
-To connect the temperature sensor, you will fist have to have set up the main weather station box and the air sensor board.
+To connect the temperature sensor, you will first have to have set up the main weather station box and the air sensor board.
 
-1. Locate the socket on the air sensor board labeled Temperature Probe
+1. Locate the socket on the air sensor board labelled Temperature Probe
 
 2. The Temperature probe can be directly connected into this socket.
 
-*When connected the temperature rcorded by the probe is written to a file in /sys*
 
 ## Sample Code
 
-The easiest way to access the temperature probe is using the prebuilt python module `ds18b29_therm.py` available from the downloaded GitHub repo - https://github.com/raspberrypi/weather-station.git
+The easiest way to access the temperature probe is using the pre-built python module `ds18b29_therm.py` available from the downloaded GitHub repo - https://github.com/raspberrypi/weather-station.git
 
 ```python
 import ds18b20_therm

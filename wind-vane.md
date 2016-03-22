@@ -7,7 +7,7 @@ Here is the wind vane sensor supplied with the Raspberry Pi Weather Station kit
 ## How does it work?
 A wind vane shows the direction *from which* the wind is coming, not where it's going (this can be confusing because TV weather maps show the opposite). It works by the wind exerting force on a vertical blade which rotates to find the position of least resistance, this position is then aligned with the direction of the oncoming wind.
 
-The wind vane is the more complex than the [rain gauge](rain.md) or [anemometer](anemometer.md). It does use reed switches and magnets but it works in a completely different way. Let's look inside the wind vane to see:
+The wind vane is the more complex than the [rain gauge](rain-gauge.md) or [anemometer](anemometer.md). It does use reed switches and magnets but it works in a completely different way. Let's look inside the wind vane to see:
 
 1. Pull the top off the wind vane, it should come off without much force. On the underside you'll again find the metal cylinder which is the magnet.
 
@@ -67,15 +67,15 @@ To do this we're going to use a clever microchip called an [Analogue to Digital 
 
 To connect the wind vane to the weather station board you will need to first have set up the main [weather station box]()
 1. Locate the socket on the weather station board marked **WIND** and the corresponding grommet.
-1. Unscrew the grommet from the case and thread the windvane plug through to the inside of the box.
+1. Unscrew the grommet from the case and thread the wind vane plug through to the inside of the box.
 
-  ![Connecting](wind_connect.jpeg)
+  ![Connecting](images\Fix_Grommit.jpg)
 
 1. Connect the plug to the socket, and tighten up the grommet.
 
 ## Sample Code
 
-  ```python
+```python
   while True:
       data = [] # a list to store the measurements
       length = 10 # ten seconds
