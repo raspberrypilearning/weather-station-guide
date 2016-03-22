@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Raspberry Pi Weather Demo</title>
+	<link href="css/rpi.css" rel="stylesheet" type="text/css">
+	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot/excanvas.min.js"></script><![endif]-->
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.time.js"></script>
+	<script language="javascript" type="text/javascript" src="js/flot/jquery.flot.navigate.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var time_now = Date.now();
+		flot_defaults = { 
+			xaxis: { 
+				mode: "time",
+				minTickSize: [1, "hour"],
+				min: time_now - 86400000, //Last 24 hours
+				max: time_now,
+				twelveHourClock: true
+			},
+			pan: {
+				interactive: true
+			},
+			zoom: {
+				interactive: true
+			}
+		};
+		
+		columns = [
+			{title: "Ambient temperature, C", col: "AMBIENT_TEMPERATURE"}, 
+			{title: "Ground temperature, C", col: "GROUND_TEMPERATURE"}, 
+			{title: "Air quality, %", col: "AIR_QUALITY"}, 
+			{title: "Air pressure, hPa", col: "AIR_PRESSURE"}, 
+			{title: "Relative humidity, %", col: "HUMIDITY"}, 
+			{title: "Wind speed, km/h", col: "WIND_SPEED"}, 
+			{title: "Wind gust speed, km/h", col: "WIND_GUST_SPEED"},
+			{title: "Rainfall, mm", col: "RAINFALL"} 
+			]
+
+		var $update_plot = function(plot, $ph, col, timeout) {
+			var axes = plot.getAxes();
+			var mysql_from = (axes.xaxis.min / 1000).toFixed(0);
+			var mysql_to = (axes.xaxis.max / 1000).toFixed(0);
+
+			var on_data_received = function(data) {
+				var opts = $.extend({}, flot_defaults);
+				opts.xaxis.min = axes.xaxis.min;
+				opts.xaxis.max = axes.xaxis.max;
+
+				$.plot($ph, [data], opts);
+			};
+
+			$.ajax({
+				url: "./data.php?col=" + col.col + "&from=" + mysql_from + "&to=" + mysql_to,
+				type: "GET",
+				dataType: "json",
+				success: on_data_received
+			});
+
+			timeout = null;
+		};
+
+		var $content = $("#content");
+		
+		$.each( columns, function(i, col){
+			var $container = $("<div/>");
+			$container.addClass("demo-container");
+			
+			var $title = $("<p/>");
+			$title.text(col.title);
+			
+			var $placeholder = $("<div/>");
+			$placeholder.addClass("demo-placeholder");
+			$placeholder.attr("id", col.col);
+
+			var $info = $("<div/>");
+			
+			$container.append($placeholder);
+			$content.append($title);
+			$content.append($container);
+			$content.append($info);
+
+			var update_timeout = null;
+
+			$update_plot_timer = function(event, plot) {
+				if (update_timeout != null) clearTimeout(update_timeout);
+				update_timeout = setTimeout(function() { 
+					$update_plot(plot, $placeholder, col, update_timeout); 
+				}, 500);
+			};
+
+			$placeholder.bind("plotpan", $update_plot_timer);
+			$placeholder.bind("plotzoom", $update_plot_timer);
+
+			var plot = $.plot($placeholder, [], flot_defaults);
+
+			$update_plot(plot, $placeholder, col, update_timeout);
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="cover">
+		<div id="header">
+			<h2>Raspberry Pi Weather Demo</h2>
+		</div>
+	</div>
+
+	<div id="content">
+	</div>
+
+	<div id="footer">
+		<a href="http://www.raspberrypi.org/">Raspberry Pi Foundation</a>
+		<a href="csv.php">Dump entire database to CSV</a>
+	</div>
+
+</body>
+</html>
