@@ -1,37 +1,85 @@
 # Publishing weather data with Oracle
 
-One of the big ideas with the weather station is to allow users to upload their data to a shared Oracle database. Schools data can then compare their data with other schools data and carry out comparison, test hypotheses and get a biiger picture of global weather.
+One of the big ideas with the weather station is to allow users to upload their data to a shared Oracle database. Schools data can then compare their data with other schools and carry out comparisons, test hypotheses and get a bigger picture of global weather. It's also the easiest way to visualise your data using graphing tools and to download it in various formats and reports.
 
-## Register for an Remote database
-1. You can register your Weather Station with a cloud based **Oracle** database so that your data can be used by other schools.
+## Register for an Oracle Apex database account
+### Register
 
-  [Oracle Apex Database](https://apex.oracle.com/pls/apex/f?p=84942:LOGIN_DESKTOP:9427101834476:&tz=0:00)
+Go [here to register](https://apex.oracle.com/pls/apex/f?p=84942:LOGIN_DESKTOP:9427101834476:&tz=0:00)
   
-  You will need to complete a form whereupon you must wait for a Raspberry Pi admin to approve your school in the database. Once approved an activation email will be sent to you containing a verification code. Log in using your **school name** for the username and the password that you chose. You will then be prompted for the verification code from the email.
+![](images/login.png)
+
+**Do not fill in any details.** Just click on the "Register" button. On the next screen fill in your details. Contactable means you are happy to be contacted by other schools as part of the project.
+
+![](images/details.png)
+
+Hit "Register" top right. You will see:
+
+![](images/confirm.png)
+
   
-  Many weather stations can belong to one school. Once you have logged in you'll need to create a new weather station under your school. The *latitude* and *longitude* of the weather station will be required for this. Once you have created a weather station it will have its own password automatically generated, this is used by the weather station itself when it uploads the measurements to Oracle and is separate to your school login.
+Registrations are validated manually and may take up to 24 hours depending on your time zone. If you have been waiting more than 24 hours please first check your junk mail folder and then contact weather@raspberrypi.org.
+
+The activation email will contain a password and a verification code. 
+
+###Log in
+
+Log in using your **school name** (as entered in the registration form) for the Username and the password from the email. 
+
+![](images/school-login.png)
+
+You will be prompted for the verification code from the email when logging in for the first time.
+
+![](images/activation.PNG)
+
+
+###Edit your school details
+You should change your password to something more memorable. Click on your school name and then "Edit" to change your details.
+
+![](images/edit-school.png)
+
+
+##Add your weather station
   
-  *Note:* There is a known bug here where the *Add Weather Station* screen does not show a `Create` button, but only a `Return` button on the right. If you experience this just log out and back in and that should fix it.
+Weather stations tab --> Add Weather Station
+
+![](images/addws.png)
+
+
+The *latitude* and *longitude* of the weather station will be required for this. There are lots of websites such as [www.latlong.net](www.latlong.net) that will do this. Once you have created a weather station it will be given a password. You will need this in the next step to connect to the Oracle database. 
+
+![](images/ws-passcode.png)
   
-## Update you local setup
-1. Add the weather station name and password to the local Oracle credentials file. This allows the code that uploads to Oracle to know what credentials to use.
+  
+## Update credential files with your weather station details
+Add the weather station name and password to the local Oracle credentials file. This allows the code that uploads to Oracle to add it to the correct weather station.
 
   `cd ~/weather-station`
   
   `nano credentials.oracle.template`
   
-  Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the weather station as specified in Oracle (under *Home > Weather Stations*). The double quotes `"` enclosing these values in this file are important so take care not to remove them by mistake.
+  Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the weather station above. The double quotes `"` enclosing these values in this file are important so take care not to remove them by mistake. The weather station name must match exactly and is case sensitive.
   
   Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
   
-1. Rename the Oracle credentials template file to enable it.
+Rename the Oracle credentials template file to enable it.
 
   `mv credentials.oracle.template credentials.oracle`
   
 ## Checking that data is received
 
-
-
-1. You can manually trigger an upload too with the following command:
+Manually trigger an upload with the following command:
 
   `sudo ~/weather-station/upload_to_oracle.py`
+
+Login to your Oracle Apex account as above and go to 'Weather measurements' You should see the station readings. 
+
+![](images/weather-readings.png)
+
+
+You can download your data in various formats and also make charts using the menu:
+
+![](images/wsmenu.png)
+
+
+
