@@ -174,6 +174,8 @@ sudo apt-get remove fake-hwclock -y
 
 ### Install the necessary software packages
 
+At the command line, type the following: 
+
 ``` {.bash}
 sudo apt-get install i2c-tools python-smbus telnet -y
 ```
@@ -218,7 +220,7 @@ Here you'll set up your Weather Station to automatically log the collected weath
 
 ### Install the necessary software packages
 
-At the command line type the following:
+At the command line, type the following:
 
   ```
   sudo apt-get update
@@ -444,7 +446,7 @@ You can download your data in various formats and also make charts using the men
 
 
 ## Next Steps
-- Get support--or show off your weather station!--on [our forum](https://www.raspberrypi.org/forums/viewforum.php?f=112).
+- Get support, or show off your weather station! Visit [our forum](https://www.raspberrypi.org/forums/viewforum.php?f=112).
 - [Visualise your data on a website](demo_site.md)
 - [Schemes of work](https://github.com/raspberrypilearning/weather-station-sow)
 
