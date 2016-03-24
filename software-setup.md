@@ -1,13 +1,7 @@
 Software Set-up
 ==============
-You can download our weather station disk image and write it to an SD card or you can follow the manual installation below. We recommend using the disk image.
+You can download our [weather station disk image]( and write it to an SD card or you can follow the manual installation below. We recommend using the disk image.
 
-#Using our weather station disk image
-
-1.	[Download the disk image](LINK) and follow the instructions for writing it to an SD card.
-2.	Put the SD card into the Raspberry Pi in your weather station and boot it up.
-3.	Skip to the **Testing the Sensors** section below and test that the weather station and all sensors are working.
-4.	Go to [Database Set-up](database-setup.md)
 
 #Manual installation
 Alternatively you can follow the steps below. You do not need any prior knowledge but it is more technical than using the disk image. The benefit of doing the tutorial is that you will learn about the workings of the sensors and the station as you do it. 
