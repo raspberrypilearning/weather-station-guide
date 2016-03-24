@@ -15,7 +15,7 @@ To connect the temperature sensor, you will first have to have set up the main w
 
 ## Sample Code
 
-The easiest way to access the temperature probe is using the pre-built python module `ds18b29_therm.py` available from the downloaded GitHub repo - https://github.com/raspberrypi/weather-station.git
+The easiest way to access the temperature probe is using the pre-built python module `ds18b29_therm.py` available from the downloaded [GitHub repo](https://github.com/raspberrypi/weather-station.git). 
 
 ```python
 import ds18b20_therm
@@ -24,8 +24,8 @@ temp_probe = des18b20_therm.DS18B20()
 print(temp_probe)
 ```
 
-The current temperature is recorded in a text file at /sys/bus/w1/devices/28*/w1_slave
-If we the current temperature, we can first check the contents of this file.
+The current temperature is recorded in a text file at `sys/bus/w1/devices/28*/w1_slave`.
+If we need the current temperature, we can first check the contents of this file.
 
 Open up `lxterminal` and then try the following command:
 
@@ -39,7 +39,7 @@ The output should look something like this:
 61 01 4b 46 7f ff 0f 10 02 t=22062
 ```
 
-The first line reports whether the data is valid or not - so a `YES` means we have valid data.
+The first line reports whether the data is valid or not, so a `YES` means we have valid data.
 The second line reports the recorded temperature. In this case we have a recorded value of 22062.
 
 This temperature might seem pretty high, but it's recorded in millicelsius (1000th of a degree). To convert this to celsius, you'll need to divide it by 1000.
