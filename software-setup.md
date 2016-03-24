@@ -171,8 +171,11 @@ sudo update-rc.d fake-hwclock remove
 sudo apt-get remove fake-hwclock -y
 ```
 
+## Testing the sensors
 
 ### Install the necessary software packages
+
+Power your Raspberry Pi up and log in.
 
 At the command line, type the following: 
 
@@ -180,11 +183,7 @@ At the command line, type the following:
 sudo apt-get install i2c-tools python-smbus telnet -y
 ```
 
-## Testing the sensors
-
-1.  Power your Raspberry Pi up and log in.
-
-2.  Test that the I2C devices are online and working.
+Test that the I2C devices are online and working.
 
 ``` {.bash}
 sudo i2cdetect -y 1
