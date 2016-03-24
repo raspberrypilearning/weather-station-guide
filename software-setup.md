@@ -21,7 +21,7 @@ If you get stuck or need help, please come and talk to us on [our forums](https:
     
 1. A reboot dialogue will appear. Select "Yes". 
 
-###Setting up the Real Time Clock
+##Setting up the Real Time Clock
 
 We'll be doing most of the work from the command line. Open a terminal window using the icon on the menu bar to access this:
 
@@ -42,28 +42,26 @@ We've included an install script to set up the Real Time Clock automatically. Yo
 
 ###Automatic RTC set-up
 
-1. To run the script:
+To run the script, enter the following:
 
 ```bash
 ./weather-station/install.sh
 ```
 
-	This will take some time, so please be patient. At some point it will ask you to confirm or set the time. When finished it will reboot automatically.
+This will take some time, so please be patient. At some point it will ask you to confirm or set the time. When finished it will reboot automatically.
 
-3.	Skip to the **Testing the Sensors** section below and test that the weather station and all sensors are working.
-4.	Go to [Database Set-up](database-setup.md)
+Skip to the **Testing the Sensors** section below and test that the weather station and all sensors are working.
+Finally, go to [Database Set-up](database-setup.md)
 
 
 ###Manual RTC set-up
-1.  First you want to make sure you have all the latest updates for your
-    Raspberry Pi.
+First you want to make sure you have all the latest updates for your Raspberry Pi.
 
 ``` {.bash}
     sudo apt-get update && sudo apt-get upgrade
 ```
 
-1.  You now need make some changes to a config file to allow the
-    Raspberry Pi to use the real-time clock.
+You now need make some changes to a config file to allow the Raspberry Pi to use the real-time clock.
 
 ``` {.bash}
     sudo nano /boot/config.txt
@@ -93,28 +91,27 @@ w1-therm
 
 Press \`Ctrl - O\` then \`Enter\` to save and \`Ctrl - X\` to quit nano.
 
-1.  For the next steps we need the Weather Station hat to be connected
-    to the Raspberry Pi.
+For the next steps we need the Weather Station hat to be connected to the Raspberry Pi.
 
 ``` {.bash}
 sudo halt
 ```
 
-1.  Reboot for the changes to take effect.
+Reboot for the changes to take effect.
 
 ``` {.bash}
 sudo reboot
 ```
 
-1.  Check that the Real Time Clock (RTC) appears in \`/dev\`
+Check that the Real Time Clock (RTC) appears in \`/dev\`
 
 ``` {.bash}
 ls /dev/rtc*
 ```
 
-Expected result: `/dev/rtc0`
+Expected result should be `/dev/rtc0`
 
-## Initialise the RTC with the correct time
+### Initialise the RTC with the correct time
 
 Use the \`date\` command to check the current system time is correct. If
 correct then you can set the RTC time from the system clock with the
