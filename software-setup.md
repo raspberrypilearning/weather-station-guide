@@ -74,7 +74,7 @@ dtoverlay=w1-gpio
 dtoverlay=pcf8523-rtc
 ```
 
-Press \`Ctrl - O\` then \`Enter\` to save and \`Ctrl - X\` to quit nano.
+Press **Ctrl + O** then **Enter** to save and **Ctrl + X** to quit nano.
 
 Now set the required modules to load automatically on boot.
 
@@ -89,9 +89,9 @@ i2c-dev
 w1-therm
 ```
 
-Press \`Ctrl - O\` then \`Enter\` to save and \`Ctrl - X\` to quit nano.
+Press **Ctrl + O** then **Enter** to save and **Ctrl + X** to quit nano.
 
-For the next steps we need the Weather Station hat to be connected to the Raspberry Pi.
+For the next steps we need the Weather Station HAT to be connected to the Raspberry Pi.
 
 ``` {.bash}
 sudo halt
@@ -103,7 +103,7 @@ Reboot for the changes to take effect.
 sudo reboot
 ```
 
-Check that the Real Time Clock (RTC) appears in \`/dev\`
+Check that the Real Time Clock (RTC) appears in `/dev`
 
 ``` {.bash}
 ls /dev/rtc*
@@ -113,17 +113,13 @@ Expected result should be `/dev/rtc0`
 
 ### Initialise the RTC with the correct time
 
-Use the \`date\` command to check the current system time is correct. If
-correct then you can set the RTC time from the system clock with the
-following command:
+Use the `date` command to check the current system time is correct. If it is correct then you can set the RTC time from the system clock with the following command:
 
 ``` {.bash}
 sudo hwclock -w
 ```
 
-If not then you can set the RTC time manually using the command below
-(you'll need to change the \`--date\` parameter, this example will set
-the date to the 1st of January 2014 at midnight):
+If not, then you can set the RTC time manually using the command below (you'll need to change the `--date` parameter, as this example will set the date to the 1st of January 2014 at midnight):
 
 ``` {.bash}
 sudo hwclock --set --date="yyyy-mm-dd hh:mm:ss" --utc
@@ -141,8 +137,7 @@ Then set the system clock from the RTC time
 sudo hwclock -s
 ```
 
-1.  Enable setting the system clock automatically at boot time. First
-    edit the hwclock udev rule:
+Now you need to enable setting the system clock automatically at boot time. First edit the hwclock udev rule:
 
 ``` {.bash}
 sudo nano /lib/udev/hwclock-set
@@ -158,7 +153,7 @@ else
 fi
     ```
 
-Change the \`--systz\` options to \`--hctosys\` so that they read:
+Change the `--systz` options to `--hctosys` so that they read:
 
 ``` {.bash}
 if [ yes = "$BADYEAR" ] ; then
@@ -168,7 +163,7 @@ else
 fi
     ```
 
-Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
+Press **Ctrl + O** then **Enter** to save and **Ctrl + X** to quit nano.
 
 ### Remove the fake hardware clock package
 
@@ -178,7 +173,7 @@ sudo apt-get remove fake-hwclock -y
 ```
 
 
-### Install the necessary software packages
+## Install the necessary software packages
 
 ``` {.bash}
 sudo apt-get install i2c-tools python-smbus telnet -y
