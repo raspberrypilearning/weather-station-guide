@@ -33,9 +33,9 @@ Reassemble the wind vane now. Firstly locate the letter N on the side of the bas
 
 ### How can we measure wind direction?
 
-So we now understand that the wind vane is essentially a variable resistor similar to a volume control (but with only 16 positions). Resistance is something that we can't measure directly because it's a passive property of the wind vane. What we need to do is measure something that changes as a *consequence* of the resistance. Namely the *voltage* going through the wind vane. The voltage level passing through it will go up and down as different resistors are switched on and off by the magnet. That, we *can* measure.
+So we now understand that the wind vane is essentially a variable resistor similar to a volume control (but with only 16 positions). Resistance is something that we can't measure directly because it is a passive property of the wind vane. What we need to do is measure something that changes as a consequence of the resistance, namely the voltage going through the wind vane. The voltage level passing through it will go up and down as different resistors are switched on and off by the magnet, and this is something we can measure.
 
-This is going to be entirely different to what we have done before. With the rain gauge and the anemometer we were working with voltage levels changing between 0 volts meaning *LOW* and 3.3 volts meaning *HIGH*. Our code could only tell us if a GPIO pin was HIGH or LOW but not somewhere in between. This is what is known as a *digital* signal, all or nothing, 1 or 0, HIGH or LOW. For the wind vane we need to accommodate a range between HIGH and LOW, this is known as an *analogue* signal.
+This is going to be entirely different to what we have done before. With the rain gauge and the anemometer we were working with voltage levels changing between 0 volts, meaning LOW, and 3.3 volts, meaning HIGH. Our code could only tell us if a GPIO pin was HIGH or LOW but not somewhere in between. This is what is known as a **digital** signal, all or nothing, 1 or 0, HIGH or LOW. For the wind vane we need to accommodate a range between HIGH and LOW, which is known as an **analogue** signal.
 
 ### Analogue vs Digital
 
@@ -51,13 +51,13 @@ It is important for us to understand the general concept of analogue and digital
 
 - Directional-pad: Digital
 
-  The directional-pad is digital because the each direction button has only two states, on and off. Just like HIGH and LOW. In a driving game it would be like steering a car using the indicator stick, you would have full left and full right only. It would be very tricky to control!
+  The directional-pad is digital because the each direction button has only two states: on and off (just like HIGH and LOW). In a driving game, it would be like trying to steer a car using the indicator stick: you would have full left and full right only. It would be very tricky to control!
 
-Analogue and digital both have their place and often one works better for a particular task than the other. For a game like a flight simulator you would want analogue control to aim the plane, whereas for something simple like a jump, run and shoot platform game digital control is better.
+Analogue and digital both have their place and often one works better for a particular task than the other. For a game like a flight simulator you would want analogue control to aim the plane, whereas for something simple like a jump, run and shoot platform game, digital control is better.
 
 ### Analogue to Digital Conversion
 
-So to recap then. The wind vane has a voltage going through it and this will vary according to which resistors are switched in and out by the reed switches and magnet. The challenge we face is being able to observe this analogue signal changing on a computer which is basically a digital machine.
+To recap: the wind vane has a voltage going through it and this will vary according to which resistors are switched in and out by the reed switches and magnet. The challenge we face is being able to observe this analogue signal changing on a computer which is a digital machine.
 
 ![](../../../images/adc_msop10.png)
 
