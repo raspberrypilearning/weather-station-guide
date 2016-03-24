@@ -69,7 +69,7 @@ To connect the wind vane to the weather station board you will need to first hav
 1. Locate the socket on the weather station board marked **WIND** and the corresponding grommet.
 1. Unscrew the grommet from the case and thread the wind vane plug through to the inside of the box.
 
-  ![Connecting](images\Fix_Grommit.jpg)
+  ![](images/Fix_Grommit.jpg)
 
 1. Connect the plug to the socket, and tighten up the grommet.
 
