@@ -215,7 +215,7 @@ Now that the sensors are working, we need a database to store the data from them
 
 ##Database setup
 
-Here you'll set up your Weather Station to automatically log the collected weather data. The data is stored on the Pi's SD card using a database system called MySQL. Once your station is successfully logging data locally you will also be able to [upload that data](oracle.md) to a central Oracle Apex database to share it with others. 
+Now you'll set up your Weather Station to automatically log the collected weather data. The data is stored on the Pi's SD card using a database system called MySQL. Once your station is successfully logging data locally you will also be able to [upload that data](oracle.md) to a central Oracle Apex database to share it with others. 
 
 ### Install the necessary software packages
 
@@ -283,7 +283,7 @@ Tips:
 
 ## Set up the sensor software
 
-### Download the data logging code [Skip this step if you have set up the [Real Time Clock](software-setup.md)]
+Begin by downloading the data logging code. You can skip this step if you have set up the [Real Time Clock](software-setup.md)]
 
   ```
   cd ~
