@@ -339,8 +339,9 @@ Insert the following lines before `exit 0` at the bottom of the file:
 Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
     
 
-### Update the MySQL credentials file with the password for the MySQL root user that you chose during installation
-If you are **not** in the `weather-station` folder:
+### Update the MySQL credentials file
+
+You will need to use the password for the MySQL root user that you chose during installation. If you are **not** in the `weather-station` folder, type:
 
 `cd ~/weather-station`
 
@@ -348,29 +349,29 @@ then:
 
   `nano credentials.mysql`
   
-  Change the password field to the password you chose during installation of MySQL. The double quotes `"` enclosing the values are important so take care not to remove them by mistake.
+Change the password field to the password you chose during installation of MySQL. The double quotes `"` enclosing the values are important so take care not to remove them by mistake.
   
-  Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
+Press **Ctrl + O** then **Enter** to save and **Ctrl + X** to quit nano.
 
 ## Automate updating of the database
 
-The main entry points for the code are `log_all_sensors.py` and `upload_to_oracle.py`. These will be called by a scheduling tool called [cron](http://en.wikipedia.org/wiki/Cron) to automatically take measurements. The measurements will be saved in the local MySQL database as well as uploaded to the Oracle Apex Database online ([if you registered](oracle.md)).
+The main entry points for the code are `log_all_sensors.py` and `upload_to_oracle.py`. These will be called by a scheduling tool called [cron](http://en.wikipedia.org/wiki/Cron) to take measurements automatically. The measurements will be saved in the local MySQL database as well as uploaded to the Oracle Apex Database online [if you registered](oracle.md).
 
-1. Enable cron to automatically start taking measurements, also known as *data logging mode*. 
+You should enable cron to start taking measurements automatically. This is also known as **data logging mode**. 
 
-  `crontab < crontab.save`
+`crontab < crontab.save`
 
-  Your weather station is now live and recording data at timed intervals.
+Your weather station is now live and recording data at timed intervals.
   
-  You can disable data logging mode at any time by removing the crontab with the command below:
+You can disable data logging mode at any time by removing the crontab with the command below:
   
-  `crontab -r`
+`crontab -r`
   
-  To enable data logging mode again use the command below:
+To enable data logging mode again use the command below:
   
-  `crontab < ~/weather-station/crontab.save`
+`crontab < ~/weather-station/crontab.save`
   
-Do not have data logging mode enabled while you're working through the lessons in the [scheme of work](https://github.com/raspberrypilearning/weather-station-sow).
+Please note that you should not have data logging mode enabled while you're working through the lessons in the [scheme of work](https://github.com/raspberrypilearning/weather-station-sow).
   
 
 ### Manually trigger a measurement
@@ -378,14 +379,16 @@ You can manually cause a measurement to be taken at any time with the following 
 
   `sudo ~/weather-station/log_all_sensors.py`
   
-  Don't worry if you see `Warning: Data truncated for column X at row 1`, this is expected.
+  Don't worry if you see `Warning: Data truncated for column X at row 1`: this is expected.
 
   
-## View the data in the database 
+### View the data in the database 
+
+Enter the following command:
 
   `mysql -u root -p`
   
-  Enter the password (default for the disk image installation is 'tiger'). Then switch to the `weather` database:
+  Enter the password (the default for the disk image installation is `tiger`). Then switch to the `weather` database:
   
   `USE weather;`
   
@@ -395,22 +398,23 @@ You can manually cause a measurement to be taken at any time with the following 
 
 ![](images/database.png)
   
-  After a lot of measurements have been recorded it will be sensible to use the SQL *where* clause to only select records that were created after a specific date and time:
+  After a lot of measurements have been recorded it will be sensible to use the SQL `where` clause to only select records that were created after a specific date and time:
   
   `SELECT * FROM WEATHER_MEASUREMENT WHERE CREATED > '2014-01-01 12:00:00';`
   
-  Press `Ctrl - D` or type `exit` to quit MySQL.
+  Press **Ctrl + D** or type `exit` to quit MySQL.
 
 
 ##Upload your data to the Oracle Apex database
-At this stage you have a weather station that reads its sensors and stores the data at regular intervals in a database on the SD card.
+
+At this stage you have a weather station which reads its sensors and stores the data at regular intervals in a database on the SD card.
 
 But what if the SD card gets corrupted? How do you back up your data? And how do you share it with the rest of the world?
 
-Oracle has set up a central database to allow all schools in the Weather Station project  to upload their data. It's safe there and you can download it in various formats, share it and even create graphs and reports. Here's how to do it.
+Oracle has set up a central database to allow all schools in the Weather Station project to upload their data. It is safe there, and you can download it in various formats, share it, and even create graphs and reports. Here's how to do it.
 
-##Register your school
-Firstly you will need to [register your school](oracle.md) and add your weather station. Come back here when you have your weather station passcode.
+### Register your school
+You will need to [register your school](oracle.md) and add your weather station. Come back here when you have your weather station passcode.
 
 <a name="credmanual"></a>
 
@@ -430,7 +434,7 @@ Rename the Oracle credentials template file to enable it.
 
   `mv credentials.oracle.template credentials.oracle`
   
-## Checking that data is received
+### Checking that data is received
 
 Manually trigger an upload with the following command:
 
