@@ -2,9 +2,9 @@
 The easiest way to get your Raspberry Pi Oracle Weather Station up and running is to use the pre-built disk image.
 
 ## Download and write the image to the SD card
-1.	[Download the disk image](LINK)
+1.	[Download the disk image](http://downloads.raspberrypi.org/weather_station/images/weather_station-2016-03-24/WeatherStation.zip)
 
-2.	Follow the instructions for writing it to the SD card that came with the weather station (or any other SD card of 8Gb or bigger)
+2.	Follow [the instructions](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) for writing it to the SD card that came with the weather station (or any other SD card of 8Gb or bigger)
 2.	Put the SD card into the Raspberry Pi in your weather station and power it up.
 
 ## A bit of housekeeping
