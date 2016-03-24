@@ -1,15 +1,15 @@
 #!/bin/bash
 
-echo 'Please ensure your Weather Station HAT is connected to you Raspberry Pi, with the battery installed.'
-echo 'Please ensure your Raspberry Pi is connected to the Internet'
+echo 'Please ensure your Weather Station HAT is connected to your Raspberry Pi, with the battery installed.'
+echo 'Please ensure your Raspberry Pi is connected to the internet'
 echo 'Press any key to continue'
 
 read -n 1 -s
 
-##Update and upgrade - especially important for old NOOBS installs and I2C integration
+## Update and upgrade - especially important for old NOOBS installs and I2C integration
 sudo apt-get update && sudo apt-get upgrade -y
 
-##Update config files.
+## Update config files
 echo "dtoverlay=w1-gpio" | sudo tee -a /boot/config.txt
 echo "dtoverlay=pcf8523-rtc" | sudo tee -a /boot/config.txt
 
@@ -25,26 +25,26 @@ echo "w1-therm" | sudo tee -a /etc/modules
 #w1-therm
 #EOF
 
-##Check the RTC exists
+## Check the RTC exists
 if ls /dev/rtc** 1> /dev/null 2>&1; then
     echo "RTC found"
 else
-    echo "No RTC found - please follow manual setup to Troubleshoot."
+    echo "No RTC found - please follow manual setup to troubleshoot."
     exit 1
 fi
 
-#Initialise RTC with correct time
+# Initialise RTC with correct time
 echo "The current date set is:"
 date
-read -r -p "Is this correct [y/N] " response
+read -r -p "Is this correct [y/n] " response
 response=${response,,}    # tolower
 if [[ $response =~ ^(yes|y)$ ]]; then
     sudo hwclock -w
 else
-    read -p "Enter todays date and time (yyyy-mm-dd hh:mm:ss): " user_date
-    sudo hwclock --set --date="$user_date" --utc #set hardware clock 
+    read -p "Enter today's date and time (yyyy-mm-dd hh:mm:ss): " user_date
+    sudo hwclock --set --date="$user_date" --utc # set hardware clock 
 fi
-#update system clock
+# update system clock
 sudo hwclock -s
 
 #Update hwclock config
