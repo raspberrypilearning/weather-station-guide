@@ -1,11 +1,13 @@
-Software Set-up
+Setting up the Raspberry Pi Oracle Weather Station software
 ==============
-You can download our [weather station disk image]( and write it to an SD card or you can follow the manual installation below. We recommend using the disk image.
 
+You don't need any prior knowledge to set up the weather station. There are a several steps but the benefit of setting up manually is that you will learn about the workings of the sensors and the station as you do it. You'll also be introduced to the command line interface, the text editor *nano* and MySQL database. It's also a great introduction to Linux.
+
+If you just want to get your Raspberry Pi Oracle Weather Station up and running as quickly as possible we've made a pre-built [weather station disk image](disk-image.md). 
+
+If get stuck or need help please come and talk to us on [our forums](https://www.raspberrypi.org/forums/viewforum.php?f=112).
 
 #Manual installation
-Alternatively you can follow the steps below. You do not need any prior knowledge but it is more technical than using the disk image. The benefit of doing the tutorial is that you will learn about the workings of the sensors and the station as you do it. 
-
 
 Mundane but important stuff
 ------------------------------
@@ -43,7 +45,7 @@ cd ~ && git clone https://github.com/raspberrypi/weather-station
 ```
 We've included an install script to set up the Real Time Clock automatically. You can run this file or, alternatively, follow the instructions below to set up the RTC up manually. We recommend using the install script!
 
-##Automatic set-up
+##Automatic RTC set-up
 
 1. To run the script:
 
@@ -57,7 +59,7 @@ We've included an install script to set up the Real Time Clock automatically. Yo
 4.	Go to [Database Set-up](database-setup.md)
 
 
-##Manual set-up
+##Manual RTC set-up
 1.  First you want to make sure you have all the latest updates for your
     Raspberry Pi.
 
@@ -223,4 +225,251 @@ Expected output:
 - `6a` = MCP3427. Analogue to Digital Converter on snap off AIR board.
 
 Note: `40`, `77` and `6a` will only show if you have connected the **AIR** board to the main board.
+
+Now that the sensors are working, we need a database to store the data from them.
+
+----------
+
+
+#Database setup
+
+Here you'll set up your Weather Station to automatically log the collected weather data. The data is stored on the Pi's SD card using a database system called MySQL. Once your station is successfully logging data locally you will also be able to [upload that data](oracle.md) to a central Oracle Apex database to share it with others. 
+
+## Install the necessary software packages
+
+At the command line type the following:
+
+  ```
+  sudo apt-get update
+  sudo apt-get install apache2 mysql-server python-mysqldb php5 libapache2-mod-php5 php5-mysql -y
+  ```
+  
+> **Pro tip**: If you make a mistake, use the cursor UP arrow to go back to previous lines for editing.
+
+**This will take some time**. You will be prompted to create and confirm a password for the root user of the MySQL database server. Don't forget it, you'll need it later.
+
+## Set up a local database
+
+###Create the database within MySQL
+
+  `mysql -u root -p`
+  
+  Enter the password that you chose during installation.
+  
+  You'll now be at the MySQL prompt `mysql>`, first create the database:
+  
+  `CREATE DATABASE weather;`
+  
+  Expected result: `Query OK, 1 row affected (0.00 sec)`
+  
+  Switch to that database:
+  
+  `USE weather;`
+  
+  Expected result: `Database changed`
+
+>**Pro tip**: If MySQL doesn't do anything when it should you've probably forgotten the final `;`. Just type it in when prompted and press `Enter`
+  
+###Create the table that will store the weather data
+
+Tips:
+
+- Don't forget the commas at the end of row
+- Use the cursor UP arrow to copy and edit a previous line as many are similar
+- Type the code carefully and *exactly* as written. Otherwise things will break later.
+- Use CAPSLOCK!
+  
+```
+  CREATE TABLE WEATHER_MEASUREMENT(
+    ID BIGINT NOT NULL AUTO_INCREMENT,
+    REMOTE_ID BIGINT,
+    AMBIENT_TEMPERATURE DECIMAL(6,2) NOT NULL,
+    GROUND_TEMPERATURE DECIMAL(6,2) NOT NULL,
+    AIR_QUALITY DECIMAL(6,2) NOT NULL,
+    AIR_PRESSURE DECIMAL(6,2) NOT NULL,
+    HUMIDITY DECIMAL(6,2) NOT NULL,
+    WIND_DIRECTION DECIMAL(6,2) NULL,
+    WIND_SPEED DECIMAL(6,2) NOT NULL,
+    WIND_GUST_SPEED DECIMAL(6,2) NOT NULL,
+    RAINFALL DECIMAL (6,2) NOT NULL,
+    CREATED TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY ( ID )
+  );
+```
+  
+  Expected result: `Query OK, 0 rows affected (0.05 sec)`
+  
+  Press `Ctrl - D` or type `exit` to quit MySQL.
+
+## Setup the sensor software
+
+### 1. Download the data logging code [Skip this step if you have set up the [Real Time Clock](software-setup.md)]
+
+  ```
+  cd ~
+  git clone https://github.com/raspberrypi/weather-station.git
+  ```
+  
+  This will create a new folder in the home directory called `weather-station`.
+
+### 2. Start the Weather Station daemon and test it
+
+> **Note:** A daemon is process that runs in the background.
+
+  `sudo ~/weather-station/interrupt_daemon.py start`
+  
+  Expected result: `PID: 2345` (your number will be different)
+  
+  A continually running process is required to monitor the rain gauge and the anemometer. These are reed switch sensors and the code uses interrupt detection. These interrupts can occur at any time as opposed to the timed measurements of the other sensors. You can use the *telnet* program to test or monitor it.
+  
+  `telnet localhost 49501`
+  
+  Expected result:
+  
+  ```
+  Trying 127.0.0.1...
+  Connected to localhost.
+  Escape character is '^]'.
+  OK
+  ```
+  
+  The following text commands can be used:
+  
+  - `RAIN`: displays rainfall in ml
+  - `WIND`: displays average wind speed in kph
+  - `GUST`: displays wind gust speed in kph
+  - `RESET`: resets the rain gauge and anemometer interrupt counts to zero
+  - `BYE`: quits
+  
+  Use the `BYE` command to quit.
+
+### 3. Set the Weather Station daemon to automatically start at boot
+
+`sudo nano /etc/rc.local`
+  
+Insert the following lines before `exit 0` at the bottom of the file:
+  
+    
+    echo "Starting Weather Station daemon..."
+    
+    /home/pi/weather-station/interrupt_daemon.py start
+    
+Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
+    
+
+### 4. Update the MySQL credentials file with the password for the MySQL *root* user that you chose during installation
+If you are *not* in the `weather-station` folder:
+
+`cd ~/weather-station`
+
+then: 
+
+  `nano credentials.mysql`
+  
+  Change the password field to the password you chose during installation of MySQL. The double quotes `"` enclosing the values are important so take care not to remove them by mistake.
+  
+  Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
+
+### 5. Automate updating of the database
+
+The main entry points for the code are `log_all_sensors.py` and `upload_to_oracle.py`. These will be called by a scheduling tool called [cron](http://en.wikipedia.org/wiki/Cron) to automatically take measurements. The measurements will be saved in the local MySQL database as well as uploaded to the Oracle Apex Database online ([if you registered](oracle.md)).
+
+1. Enable cron to automatically start taking measurements, also known as *data logging mode*. 
+
+  `crontab < crontab.save`
+
+  Your weather station is now live and recording data at timed intervals.
+  
+  You can disable data logging mode at any time by removing the crontab with the command below:
+  
+  `crontab -r`
+  
+  To enable data logging mode again use the command below:
+  
+  `crontab < ~/weather-station/crontab.save`
+  
+  >**Note**: Do not have data logging mode enabled while you're working through the lessons in the [scheme of work](https://github.com/raspberrypilearning/weather-station-sow).*
+  
+
+###Manually trigger a measurement
+You can manually cause a measurement to be taken at any time with the following command:
+
+  `sudo ~/weather-station/log_all_sensors.py`
+  
+  Don't worry if you see `Warning: Data truncated for column X at row 1`, this is expected.
+
+  
+### View the data in the database 
+
+  `mysql -u root -p`
+  
+  Enter the password (default for the disk image installation is 'tiger'). Then switch to the `weather` database:
+  
+  `USE weather;`
+  
+  Run a select query to return the contents of the `WEATHER_MEASUREMENT` table.
+  
+  `SELECT * FROM WEATHER_MEASUREMENT;`
+
+![](images/database.png)
+  
+  After a lot of measurements have been recorded it will be sensible to use the SQL *where* clause to only select records that were created after a specific date and time:
+  
+  `SELECT * FROM WEATHER_MEASUREMENT WHERE CREATED > '2014-01-01 12:00:00';`
+  
+  Press `Ctrl - D` or type `exit` to quit MySQL.
+
+----------
+
+
+#Upload your data to the Oracle Apex database
+At this stage you have a weather station that reads its sensors and stores the data at regular intervals in a database on the SD card.
+
+But what if the SD card gets corrupted? How do you back up your data? And how do you share it with the rest of the world?
+
+Oracle has set up a central database to allow all schools in the Weather Station project  to upload their data. It's safe there and you can download it in various formats, share it and even create graphs and reports. Here's how to do it.
+
+##Register your school
+Firstly you will need to [register your school](oracle.md) and add your weather station. Come back here when you have your weather station passcode.
+
+<a name="credmanual"></a>
+## Update credential files with your weather station details
+
+Add the weather station name and password to the local Oracle credentials file. This allows the code that uploads to Oracle to add it to the correct weather station.
+
+  `cd ~/weather-station`
+  
+  `nano credentials.oracle.template`
+  
+  Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the weather station above. The double quotes `"` enclosing these values in this file are important so take care not to remove them by mistake. The weather station name must match exactly and is case sensitive.
+  
+  Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
+  
+Rename the Oracle credentials template file to enable it.
+
+  `mv credentials.oracle.template credentials.oracle`
+  
+## Checking that data is received
+
+Manually trigger an upload with the following command:
+
+  `sudo ~/weather-station/upload_to_oracle.py`
+
+Login to your school's [Oracle Apex account](oracle.md) and go to 'Weather measurements' You should see the station readings. 
+
+![](images/weather-readings.png)
+
+
+You can download your data in various formats and also make charts using the menu:
+
+![](images/wsmenu.png)
+
+
+## Next Steps
+- Get support--or show off your weather station!--on [our forum](https://www.raspberrypi.org/forums/viewforum.php?f=112).
+- [Visualise your data on a website](demo_site.md)
+- [Schemes of work](https://github.com/raspberrypilearning/weather-station-sow)
+
+
+
 

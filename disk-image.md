@@ -12,16 +12,15 @@ The easiest way to get your Raspberry Pi Oracle Weather Station up and running i
 The Pi will boot to a text prompt:
 
 1. Login with `user` pi and password `raspberry`
-2. Run the configuration tool: `sudo raspi-config`
-3. Select 1 `Resize .... blah`
- 
-    ![pic]()
+2. Run the configuration tool
+`sudo raspi-config`
+3. Select option 1 `Expand Filesystem`
 
-4. Select \<Finish\>
+4. Select `Finish`
 
-5. Select \<No\> when asked to reboot.
+5. Select `No` when asked to reboot.
 
-6. It's a good idea to change your password while you're here.
+6. It's a good idea to **change your password** while you're here. Select option 2 `Change User Password` (This is the password you will need to login to your Raspberry Pi as user 'pi'.)
 
 
 ## Make the weather station run at boot and log data automatically
@@ -36,17 +35,33 @@ The Pi will boot to a text prompt:
 1. Check date and time
     `date`
 2. If the date is wrong fix it
-    `blah`
-   
-3. Finally reboot
+     `sudo date -s 'yyy-mm-dd hhh:mm:ss'` 
+
+> For example, to set the date and time to 24th March 2016 12:24:56 type
+>     `sudo date -s '2016-03-24 12:34:56'`
+
+  
+3. Finally, reboot
     `sudo reboot`
 
-## Set up your weather station to upload to the Oracle Apex database
+# Set up your weather station to upload to the Oracle Apex database
+
+At this stage you have a weather station that reads its sensors and stores the data at regular intervals in a database on the SD card.
+
+But what if the SD card gets corrupted? How do you back up your data? And how do you share it with the rest of the world?
+
+Oracle has set up a central database to allow all schools in the Weather Station project  to upload their data. It's safe there and you can download it in various formats, share it and even create graphs and reports. Here's how to do it.
+
+##Register your school
+Firstly you will need to [register your school](oracle.md) and add your weather station. Come back here when you have your weather station passcode.
+
+<a name="credimage"></a>
+## Update credential files with your weather station details
 This is the one thing we couldn't put in the disk image--your weather station name and password from when you [registered with Oracle's Apex database](). You have to fill these in manually into the credentials file as follows:
 
 
 1. Go to your home directory
-    `cd ~\`
+    `cd ~`
 
 2. Edit the credentials file using the *nano* editor
     `nano credentials.json`
@@ -67,17 +82,17 @@ to:
               user: "MyStation", pass: "MyPass"}
 }
 ```
-Double check curly braces and commas are in the right place!
+*Double check curly braces and commas are in the right place!*
 
 
-With **MyStation** and **MyPass** changed to your weather station name and passcode. Make sure you type them in exactly, they are case sensitive.
+Change **MyStation** and **MyPass** to your weather station name and passcode. Make sure you type them in exactly, they are case sensitive.
 
 
-3. Save file with `CTRL-O`, press `Enter` then `CTRL-X` to quit 
+3. Save the file with `CTRL-O`, press `Enter` then `CTRL-X` to quit nano.
  
-It should be picked up and reconfigured automatically when you write the file back.
 
 ## Check that it's working
+###Local database and logging
 
 1. Log in to the database [password: tiger]
     `mysql -u root -p weather` 
@@ -85,8 +100,14 @@ It should be picked up and reconfigured automatically when you write the file ba
 2. SELECT CREATED, LEVEL, TEXT FROM LOG ORDER BY CREATED;
 3. Expected result: 
 
+###Oracle remote database
+1. Login to your school's [Oracle database account](oracle.md)
 
-????
+2. Go to 'Weather measurements' You should see the station readings. The database logs every 10 minutes locally and uploads to Oracle once per hour. If no readings are showing, check back a little later.
 
-4.	Go to [Database Set-up](database-setup.md)
+![](images/weather-readings.png)
 
+
+You can download your data in various formats and also make charts using the menu:
+
+![](images/wsmenu.png)

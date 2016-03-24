@@ -17,8 +17,15 @@ Hit "Register" top right. You will see:
 
 ![](images/confirm.png)
 
+
+----------
   
-Registrations are validated manually and may take up to 24 hours depending on your time zone. If you have been waiting more than 24 hours please first check your junk mail folder and then contact weather@raspberrypi.org.
+> **IMPORTANT: Registrations are validated manually and may take up to 24 hours depending on your time zone**
+
+----------
+
+
+If you have been waiting more than 24 hours please first check your junk mail folder and then contact weather@raspberrypi.org.
 
 The activation email will contain a password and a verification code. 
 
@@ -49,37 +56,12 @@ Weather stations tab --> Add Weather Station
 The *latitude* and *longitude* of the weather station will be required for this. There are lots of websites such as [www.latlong.net](www.latlong.net) that will do this. Once you have created a weather station it will be given a password. You will need this in the next step to connect to the Oracle database. 
 
 ![](images/ws-passcode.png)
+
+##Next steps
+Now you have the weather station passcode you can set it up to upload data to the Oracle database.
+
+If you used the disk image [go here](disk-image.md#credimage)
+If you set up the weather station manually [go here](software-setup.md#credmanual)
+
   
   
-## Update credential files with your weather station details
-Add the weather station name and password to the local Oracle credentials file. This allows the code that uploads to Oracle to add it to the correct weather station.
-
-  `cd ~/weather-station`
-  
-  `nano credentials.oracle.template`
-  
-  Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the weather station above. The double quotes `"` enclosing these values in this file are important so take care not to remove them by mistake. The weather station name must match exactly and is case sensitive.
-  
-  Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
-  
-Rename the Oracle credentials template file to enable it.
-
-  `mv credentials.oracle.template credentials.oracle`
-  
-## Checking that data is received
-
-Manually trigger an upload with the following command:
-
-  `sudo ~/weather-station/upload_to_oracle.py`
-
-Login to your Oracle Apex account as above and go to 'Weather measurements' You should see the station readings. 
-
-![](images/weather-readings.png)
-
-
-You can download your data in various formats and also make charts using the menu:
-
-![](images/wsmenu.png)
-
-
-
