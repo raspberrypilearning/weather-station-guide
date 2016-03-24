@@ -10,7 +10,7 @@ To connect the temperature sensor, you will first have to have set up the main w
 
 1. Locate the socket on the air sensor board labelled Temperature Probe
 
-2. The Temperature probe can be directly connected into this socket.
+2. The temperature probe can be directly connected into this socket.
 
 
 ## Sample Code
@@ -42,7 +42,7 @@ The output should look something like this:
 The first line reports whether the data is valid or not - so a `YES` means we have valid data.
 The second line reports the recorded temperature. In this case we have a recorded value of 22062.
 
-This temperature might seem pretty high - but it's recorded in millicelsius (1000th of a degree). To conert this to celcius you'll need to divide it by 1000.
+This temperature might seem pretty high, but it's recorded in millicelsius (1000th of a degree). To convert this to celsius, you'll need to divide it by 1000.
 
 Here is some sample code to show you one way of accessing the temperature.
 
