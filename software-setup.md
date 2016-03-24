@@ -232,11 +232,13 @@ Please note that this will take some time. You will be prompted to create and co
 
 ###Create a local database within MySQL
 
+Enter the following:
+
   `mysql -u root -p`
   
   Enter the password that you chose during installation.
   
-  You'll now be at the MySQL prompt `mysql>`, first create the database:
+  You'll now be at the MySQL prompt `mysql>`; first create the database:
   
   `CREATE DATABASE weather;`
   
@@ -250,13 +252,13 @@ Please note that this will take some time. You will be prompted to create and co
 
 If MySQL doesn't do anything when it should you've probably forgotten the final `;`. Just type it in when prompted and press **Enter**.
   
-### Create the table which will store the weather data
+### Create a table to store the weather data
 
-Tips:
+Type the code below, taking note of the following tips: 
 
 - Don't forget the commas at the end of row
 - Use the cursor UP arrow to copy and edit a previous line as many are similar
-- Type the code carefully and **exactly** as written. Otherwise things will break later.
+- Type the code carefully and **exactly** as written, otherwise things will break later.
 - Use CAPS LOCK!
   
 ```
