@@ -453,7 +453,7 @@ You can download your data in various formats and also make charts using the men
 ## Next Steps
 - Get support, or show off your weather station! Visit [our forum](https://www.raspberrypi.org/forums/viewforum.php?f=112).
 - [Visualise your data on a website](demo_site.md)
-- [Schemes of work](https://github.com/raspberrypilearning/weather-station-sow)
+- Check out our linked [schemes of work](https://github.com/raspberrypilearning/weather-station-sow)
 
 
 
