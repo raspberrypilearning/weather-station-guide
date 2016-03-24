@@ -262,6 +262,10 @@ We made the weather station as an educational *kit* on purpose, so that teachers
 
 If you get stuck or just want to share your experiences, [please come to the forums](https://www.raspberrypi.org/forums/viewforum.php?f=112) for a chat. Good luck and have fun!
 
+----------
+#Next steps
+Set up the [software](software-setup.md).
+
 
 ----------
 
