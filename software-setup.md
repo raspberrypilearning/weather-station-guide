@@ -40,7 +40,7 @@ cd ~ && git clone https://github.com/raspberrypi/weather-station
 ```
 We've included an install script to set up the Real Time Clock automatically. You can run this file or, alternatively, follow the instructions below to set up the RTC up manually. We recommend using the install script!
 
-###Automatic RTC set-up
+###Automatic RTC setup
 
 To run the script, enter the following:
 
@@ -50,11 +50,10 @@ To run the script, enter the following:
 
 This will take some time, so please be patient. At some point it will ask you to confirm or set the time. When finished it will reboot automatically.
 
-Skip to the **Testing the Sensors** section below and test that the weather station and all sensors are working.
-Finally, go to [Database Set-up](database-setup.md)
+Skip to the **Testing the Sensors** section below and test that the weather station and all sensors are working. Finally, go to **Database Setup**
 
 
-###Manual RTC set-up
+###Manual RTC setup
 First you want to make sure you have all the latest updates for your Raspberry Pi.
 
 ``` {.bash}
@@ -109,7 +108,7 @@ Check that the Real Time Clock (RTC) appears in `/dev`
 ls /dev/rtc*
 ```
 
-Expected result should be `/dev/rtc0`
+Expected result: `/dev/rtc0`
 
 ### Initialise the RTC with the correct time
 
@@ -173,17 +172,17 @@ sudo apt-get remove fake-hwclock -y
 ```
 
 
-## Install the necessary software packages
+### Install the necessary software packages
 
 ``` {.bash}
 sudo apt-get install i2c-tools python-smbus telnet -y
 ```
 
-### Testing the sensors
+## Testing the sensors
 
 1.  Power your Raspberry Pi up and log in.
 
-2.  Test that the I²C devices are online and working.
+2.  Test that the I2C devices are online and working.
 
 ``` {.bash}
 sudo i2cdetect -y 1
@@ -228,11 +227,9 @@ At the command line type the following:
   
 If you make a mistake, use the cursor UP arrow to go back to previous lines for editing.
 
-**This will take some time**. You will be prompted to create and confirm a password for the root user of the MySQL database server. Don't forget it, you'll need it later.
+Please note that this will take some time. You will be prompted to create and confirm a password for the root user of the MySQL database server. Don't forget it, as you'll need it later.
 
-## Set up a local database
-
-###Create the database within MySQL
+###Create a local database within MySQL
 
   `mysql -u root -p`
   
@@ -250,9 +247,9 @@ If you make a mistake, use the cursor UP arrow to go back to previous lines for 
   
   Expected result: `Database changed`
 
-If MySQL doesn't do anything when it should you've probably forgotten the final `;`. Just type it in when prompted and press `Enter`
+If MySQL doesn't do anything when it should you've probably forgotten the final `;`. Just type it in when prompted and press **Enter**.
   
-## Create the table which will store the weather data
+### Create the table which will store the weather data
 
 Tips:
 
@@ -352,7 +349,7 @@ then:
   
   Press `Ctrl - O` then `Enter` to save and `Ctrl - X` to quit nano.
 
-### Automate updating of the database
+## Automate updating of the database
 
 The main entry points for the code are `log_all_sensors.py` and `upload_to_oracle.py`. These will be called by a scheduling tool called [cron](http://en.wikipedia.org/wiki/Cron) to automatically take measurements. The measurements will be saved in the local MySQL database as well as uploaded to the Oracle Apex Database online ([if you registered](oracle.md)).
 
@@ -373,7 +370,7 @@ The main entry points for the code are `log_all_sensors.py` and `upload_to_oracl
 Do not have data logging mode enabled while you're working through the lessons in the [scheme of work](https://github.com/raspberrypilearning/weather-station-sow).
   
 
-###Manually trigger a measurement
+### Manually trigger a measurement
 You can manually cause a measurement to be taken at any time with the following command:
 
   `sudo ~/weather-station/log_all_sensors.py`
@@ -381,7 +378,7 @@ You can manually cause a measurement to be taken at any time with the following 
   Don't worry if you see `Warning: Data truncated for column X at row 1`, this is expected.
 
   
-### View the data in the database 
+## View the data in the database 
 
   `mysql -u root -p`
   
@@ -413,6 +410,7 @@ Oracle has set up a central database to allow all schools in the Weather Station
 Firstly you will need to [register your school](oracle.md) and add your weather station. Come back here when you have your weather station passcode.
 
 <a name="credmanual"></a>
+
 ### Update credential files with your weather station details
 
 Add the weather station name and password to the local Oracle credentials file. This allows the code that uploads to Oracle to add it to the correct weather station.
