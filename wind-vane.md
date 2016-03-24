@@ -66,6 +66,7 @@ To do this we're going to use a clever microchip called an [Analogue to Digital 
 ## How does the sensor connect?
 
 To connect the wind vane to the weather station board you will need to first have set up the main [weather station box](https://github.com/raspberrypilearning/weather-station-guide/blob/master/hardware-setup.md)
+
 1. Locate the socket on the weather station board marked **WIND** and the corresponding grommet.
 1. Unscrew the grommet from the case and thread the wind vane plug through to the inside of the box.
 
