@@ -62,13 +62,13 @@ Skip to the **Testing the Sensors** section below and test that the weather stat
 First, you want to make sure you have all the latest updates for your Raspberry Pi:
 
 ```bash
-    sudo apt-get update && sudo apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade
 ```
 
 You now need to make some changes to a config file to allow the Raspberry Pi to use the real-time clock:
 
 ```bash
-    sudo nano /boot/config.txt
+sudo nano /boot/config.txt
 ```
 
 Add the following lines to the bottom of the file:
