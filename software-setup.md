@@ -30,15 +30,15 @@ We'll be doing most of the work from the command line. Open a terminal window, u
 
 You'll now be at a prompt:
 
-```
-{.bash}pi@raspberrypi: ~ $
+```bash
+pi@raspberrypi: ~ $
 ```
 
 You can type the commands which follow into this prompt.
 
 First, you'll need to download the necessary files: 
 
-``` {.bash}
+```bash
 cd ~ && git clone https://github.com/raspberrypi/weather-station
 ```
 
@@ -61,19 +61,19 @@ Skip to the **Testing the Sensors** section below and test that the weather stat
 
 First, you want to make sure you have all the latest updates for your Raspberry Pi:
 
-``` {.bash}
+```bash
     sudo apt-get update && sudo apt-get upgrade
 ```
 
 You now need to make some changes to a config file to allow the Raspberry Pi to use the real-time clock:
 
-``` {.bash}
+```bash
     sudo nano /boot/config.txt
 ```
 
 Add the following lines to the bottom of the file:
 
-```{.bash}
+```bash
 dtoverlay=w1-gpio
 dtoverlay=pcf8523-rtc
 ```
@@ -82,13 +82,13 @@ Press **Ctrl + O** then **Enter** to save, and **Ctrl + X** to quit nano.
 
 Now set the required modules to load automatically on boot:
 
-``` {.bash}
+```bash
 sudo nano /etc/modules
 ```
 
 Add the following lines to the bottom of the file:
 
-``` {.bash}
+```bash
 i2c-dev
 w1-therm
 ```
@@ -97,19 +97,19 @@ Press **Ctrl + O** then **Enter** to save, and **Ctrl + X** to quit nano.
 
 For the next steps, we need the Weather Station HAT to be connected to the Raspberry Pi:
 
-``` {.bash}
+```bash
 sudo halt
 ```
 
 Reboot for the changes to take effect:
 
-``` {.bash}
+```bash
 sudo reboot
 ```
 
 Check that the real-time clock (RTC) appears in `/dev`:
 
-``` {.bash}
+```bash
 ls /dev/rtc*
 ```
 
@@ -119,37 +119,37 @@ You should see something like `/dev/rtc0`.
 
 Use the `date` command to check the current system time is correct. If it's correct, then you can set the RTC time from the system clock with the following command:
 
-``` {.bash}
+```bash
 sudo hwclock -w
 ```
 
 If not, then you can set the RTC time manually using the command below (you'll need to change the `--date` parameter, as this example will set the date to the 1st of January 2014 at midnight):
 
-``` {.bash}
+```bash
 sudo hwclock --set --date="yyyy-mm-dd hh:mm:ss" --utc
 ```
 
 For example:
 
-``` {.bash}
+```bash
 sudo hwclock --set --date="2015-08-24 18:32:00" --utc
 ```
 
 Then set the system clock from the RTC time:
 
-``` {.bash}
+```bash
 sudo hwclock -s
 ```
 
 Now you need to enable setting the system clock automatically at boot time. First, edit the rule in `/lib/udev/`:
 
-``` {.bash}
+```bash
 sudo nano /lib/udev/hwclock-set
 ```
 
 Find the lines at the bottom that read:
 
-``` {.bash}
+```bash
 if [ yes = "$BADYEAR" ] ; then
     /sbin/hwclock --rtc=$dev --systz --badyear
 else
@@ -159,7 +159,7 @@ fi
 
 Change the `--systz` options to `--hctosys` so that they read:
 
-``` {.bash}
+```bash
 if [ yes = "$BADYEAR" ] ; then
     /sbin/hwclock --rtc=$dev --hctosys --badyear
 else
@@ -173,7 +173,7 @@ Press **Ctrl + O** then **Enter** to save, and **Ctrl + X** to quit nano.
 
 Use the following commands to remove the fake hardware clock package:
 
-``` {.bash}
+```bash
 sudo update-rc.d fake-hwclock remove
 sudo apt-get remove fake-hwclock -y
 ```
@@ -186,13 +186,13 @@ Power up your Raspberry Pi and log in.
 
 At the command line, type the following: 
 
-``` {.bash}
+```bash
 sudo apt-get install i2c-tools python-smbus telnet -y
 ```
 
 Test that the I2C devices are online and working:
 
-``` {.bash}
+```bash
 sudo i2cdetect -y 1
 ```
 
