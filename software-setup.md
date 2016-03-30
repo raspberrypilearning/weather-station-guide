@@ -155,7 +155,7 @@ if [ yes = "$BADYEAR" ] ; then
 else
     /sbin/hwclock --rtc=$dev --systz
 fi
-    ```
+```
 
 Change the `--systz` options to `--hctosys` so that they read:
 
@@ -165,7 +165,7 @@ if [ yes = "$BADYEAR" ] ; then
 else
     /sbin/hwclock --rtc=$dev --hctosys
 fi
-    ```
+```
 
 Press **Ctrl + O** then **Enter** to save, and **Ctrl + X** to quit nano.
 
@@ -228,10 +228,10 @@ Now you'll set up your weather station to automatically log the collected weathe
 
 At the command line, type the following:
 
-  ```
-  sudo apt-get update
-  sudo apt-get install apache2 mysql-server python-mysqldb php5 libapache2-mod-php5 php5-mysql -y
-  ```
+```bash
+sudo apt-get update
+sudo apt-get install apache2 mysql-server python-mysqldb php5 libapache2-mod-php5 php5-mysql -y
+```
   
 If you make a mistake, use the cursor UP arrow to go back to previous lines for editing.
 
@@ -241,21 +241,27 @@ Please note that this will take some time. You will be prompted to create and co
 
 Enter the following:
 
-  `mysql -u root -p`
-  
-  Enter the password that you chose during installation.
-  
-  You'll now be at the MySQL prompt `mysql>`. First, create the database:
-  
-  `CREATE DATABASE weather;`
-  
-  You should now see `Query OK, 1 row affected (0.00 sec)`.
-  
-  Switch to that database:
-  
-  `USE weather;`
-  
-  You should see `Database changed`.
+```bash
+mysql -u root -p
+```
+
+Enter the password that you chose during installation.
+
+You'll now be at the MySQL prompt `mysql>`. First, create the database:
+
+```mysql
+CREATE DATABASE weather;
+```
+
+You should now see `Query OK, 1 row affected (0.00 sec)`.
+
+Switch to that database:
+
+```mysql
+USE weather;
+```
+
+You should see `Database changed`.
 
 If MySQL doesn't do anything when it should, you've probably forgotten the final `;`. Just type it in when prompted and press **Enter**.
   
@@ -286,77 +292,87 @@ Type the code below, taking note of the following tips:
   );
 ```
   
-  You should now see `Query OK, 0 rows affected (0.05 sec)`.
+You should now see `Query OK, 0 rows affected (0.05 sec)`.
   
-  Press `Ctrl - D` or type `exit` to quit MySQL.
+Press `Ctrl - D` or type `exit` to quit MySQL.
 
 ## Set up the sensor software
 
 Begin by downloading the data logging code. You can skip this step if you have set up the [real-time clock](software-setup.md).
 
-  ```
-  cd ~
-  git clone https://github.com/raspberrypi/weather-station.git
-  ```
-  
-  This will create a new folder in the home directory called `weather-station`.
+```
+cd ~
+git clone https://github.com/raspberrypi/weather-station.git
+```
+
+This will create a new folder in the home directory called `weather-station`.
 
 ### Start the weather station daemon and test it
 
 A daemon is a process that runs in the background. To start the daemon we need for the weather station, use the following command:
 
-  `sudo ~/weather-station/interrupt_daemon.py start`
+```bash
+sudo ~/weather-station/interrupt_daemon.py start
+```
   
-  You should see something like `PID: 2345` (your number will be different).
+You should see something like `PID: 2345` (your number will be different).
   
-  A continually running process is required to monitor the rain gauge and the anemometer. These are reed switch sensors and the code uses interrupt detection. These interrupts can occur at any time, as opposed to the timed measurements of the other sensors. You can use the **telnet** program to test or monitor it, with the following command:
+A continually running process is required to monitor the rain gauge and the anemometer. These are reed switch sensors and the code uses interrupt detection. These interrupts can occur at any time, as opposed to the timed measurements of the other sensors. You can use the **telnet** program to test or monitor it, with the following command:
   
-  `telnet localhost 49501`
+```bash
+telnet localhost 49501
+```
   
-  You should see something like this:
-  
-  ```
-  Trying 127.0.0.1...
-  Connected to localhost.
-  Escape character is '^]'.
-  OK
-  ```
-  
-  The following text commands can be used:
-  
-  - `RAIN`: displays rainfall in ml
-  - `WIND`: displays average wind speed in kph
-  - `GUST`: displays wind gust speed in kph
-  - `RESET`: resets the rain gauge and anemometer interrupt counts to zero
-  - `BYE`: quits
-  
-  Use the `BYE` command to quit.
+You should see something like this:
+
+```
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+OK
+```
+
+The following text commands can be used:
+
+- `RAIN`: displays rainfall in ml
+- `WIND`: displays average wind speed in kph
+- `GUST`: displays wind gust speed in kph
+- `RESET`: resets the rain gauge and anemometer interrupt counts to zero
+- `BYE`: quits
+
+Use the `BYE` command to quit.
 
 ### Set the weather station daemon to automatically start at boot
 
 Use the following command to automate the daemon:
 
-`sudo nano /etc/rc.local`
+```bash
+sudo nano /etc/rc.local
+```
   
 Insert the following lines before `exit 0` at the bottom of the file:
-  
+
+```bash
+echo "Starting Weather Station daemon..."
     
-    `echo "Starting Weather Station daemon..."`
-    
-    `/home/pi/weather-station/interrupt_daemon.py start`
-    
+/home/pi/weather-station/interrupt_daemon.py start
+```
+
 Press `Ctrl - O` then `Enter` to save, and `Ctrl - X` to quit nano.
     
-
 ### Update the MySQL credentials file
 
 You'll need to use the password for the MySQL root user that you chose during installation. If you are **not** in the `weather-station` folder, type:
 
-`cd ~/weather-station`
+```bash
+cd ~/weather-station
+```
 
 then: 
 
-  `nano credentials.mysql`
+```bash
+nano credentials.mysql
+```
   
 Change the password field to the password you chose during installation of MySQL. The double quotes `"` enclosing the values are important, so take care not to remove them by mistake.
   
@@ -368,52 +384,66 @@ The main entry points for the code are `log_all_sensors.py` and `upload_to_oracl
 
 You should enable cron to start taking measurements automatically. This is also known as **data logging mode**: 
 
-`crontab < crontab.save`
+```bash
+crontab < crontab.save
+```
 
 Your weather station is now live and recording data at timed intervals.
   
 You can disable data logging mode at any time by removing the crontab with the command below:
   
-`crontab -r`
+```bash
+crontab -r
+```
   
 To enable data logging mode again, use the command below:
   
-`crontab < ~/weather-station/crontab.save`
+```bash
+crontab < ~/weather-station/crontab.save
+```
   
 Please note that you should not have data logging mode enabled while you're working through the lessons in the [scheme of work](https://github.com/raspberrypilearning/weather-station-sow).
   
-
 ### Manually trigger a measurement
 
 You can manually cause a measurement to be taken at any time with the following command:
 
-  `sudo ~/weather-station/log_all_sensors.py`
+```bash
+sudo ~/weather-station/log_all_sensors.py
+```
   
-  Don't worry if you see `Warning: Data truncated for column X at row 1`: this is expected.
+Don't worry if you see `Warning: Data truncated for column X at row 1`: this is expected.
 
   
 ### View the data in the database 
 
 Enter the following command:
 
-  `mysql -u root -p`
+```bash
+mysql -u root -p
+```
   
-  Enter the password (the default for the disk image installation is `tiger`). Then switch to the `weather` database:
+Enter the password (the default for the disk image installation is `tiger`). Then switch to the `weather` database:
   
-  `USE weather;`
+```bash
+USE weather;
+```
   
-  Run a select query to return the contents of the `WEATHER_MEASUREMENT` table:
-  
-  `SELECT * FROM WEATHER_MEASUREMENT;`
+Run a select query to return the contents of the `WEATHER_MEASUREMENT` table:
+
+```bash
+SELECT * FROM WEATHER_MEASUREMENT;
+```
 
 ![](images/database.png)
   
-  After a lot of measurements have been recorded, it will be sensible to use the SQL `where` clause to only select records that were created after a specific date and time:
+After a lot of measurements have been recorded, it will be sensible to use the SQL `where` clause to only select records that were created after a specific date and time:
   
-  `SELECT * FROM WEATHER_MEASUREMENT WHERE CREATED > '2014-01-01 12:00:00';`
+```bash
+SELECT * FROM WEATHER_MEASUREMENT WHERE CREATED > '2014-01-01 12:00:00';
+```
   
-  Press **Ctrl + D** or type `exit` to quit MySQL.
-
+Press **Ctrl + D** or type `exit` to quit MySQL.
 
 ## Upload your data to the Oracle Apex database
 
@@ -429,23 +459,29 @@ You'll need to [register your school](oracle.md) and add your weather station. C
 
 Add the weather station name and password to the local Oracle credentials file with the commands below. This allows the code that uploads to Oracle to add it to the correct weather station.
 
-  `cd ~/weather-station`
+```bash
+cd ~/weather-station
+
+nano credentials.oracle.template
+```
   
-  `nano credentials.oracle.template`
+Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the weather station above. The double quotes `"` enclosing these values in this file are important, so take care not to remove them by mistake. The weather station name must match exactly and is case-sensitive.
   
-  Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the weather station above. The double quotes `"` enclosing these values in this file are important, so take care not to remove them by mistake. The weather station name must match exactly and is case-sensitive.
-  
-  Press `Ctrl - O` then `Enter` to save, and `Ctrl - X` to quit nano.
+Press `Ctrl - O` then `Enter` to save, and `Ctrl - X` to quit nano.
   
 Rename the Oracle credentials template file to enable it:
 
-  `mv credentials.oracle.template credentials.oracle`
+```bash
+mv credentials.oracle.template credentials.oracle
+```
   
 ### Checking that data is received
 
 Manually trigger an upload with the following command:
 
-  `sudo ~/weather-station/upload_to_oracle.py`
+```bash
+sudo ~/weather-station/upload_to_oracle.py
+```
 
 Log into your school's [Oracle Apex account](oracle.md) and go to 'Weather Measurements'. You should see the station readings:
 
@@ -455,7 +491,6 @@ Log into your school's [Oracle Apex account](oracle.md) and go to 'Weather Measu
 You can download your data in various formats and also make charts using the menu:
 
 ![](images/wsmenu.png)
-
 
 ## Next steps
 
