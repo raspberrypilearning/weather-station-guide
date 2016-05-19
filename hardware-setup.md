@@ -113,14 +113,15 @@ found on the following pages: [Rain gauge](rain-gauge.md), [Anemometer](anemomet
 
 For this you will need:
 
-    1.  4 x plastic fixing screws
-    1.  4 x plastic spacers
-    1.  4 x plastic fixing nuts
-    1.  small acrylic base
-    1.  small air sensor housing
-    1.  2 x mounting screws
+-     4 x plastic fixing screws
+-     4 x plastic spacers
+-     4 x plastic fixing nuts
+-     small acrylic base
+-     small air sensor housing
+-     2 x mounting screws
 
-    ![](images/Air_Kit.jpg)
+
+![](images/Air_Kit.jpg)
 
 1.  Align the air sensor board with the acrylic base as shown:
 
@@ -144,46 +145,38 @@ For this you will need:
 
     ![](images/Connect_Air.jpg)
 
-<<<<<<< HEAD
-**IMPORTANT**: Don't put the rubber seals back in or try to seal the cables with glands -- the sensors need to be exposed to the air and this is why they live in a separate box.
 
-Assembling the Control Unit Housing
------------------------------------
+**IMPORTANT:** Do not replace the rubber seals or try to seal the cables. The air sensor housing needs to be open to the elements and this is why it's in a separate box.
 
-1.  Unpack the large grey case, and remove the 4 screws from inside and
-    set them to one side. They are used for securing the lid at the end.
-=======
+
 ## Assembling the control unit housing
->>>>>>> origin/master
+
 
 For this stage, you will need:
 
-    1.  The large case
-    1.  6 x 10mm screws
-    1.  Your acrylic mounted Raspberry Pi and Weather Station HAT
+- The large case
+- 6 x 10mm screws
+- Your acrylic mounted Raspberry Pi and Weather Station HAT
 
-    ![](images/Housing_Kit.jpg)
+![](images/Housing_Kit.jpg)
 
-1.  Unpack the large grey case, remove the 4 screws from inside and
-    set them to one side. They are used for securing the lid at the end.
+1.  Unpack the large grey case, remove the 4 screws from inside and set them to one side. They are used for securing the lid at the end.
 
     ![](images/Main_Housing.jpg)
 
-1.  Fix the acrylic base to the bottom of the case, using the 6 x 10mm
-    screws:
+1.  Fix the acrylic base to the bottom of the case, using the 6 x 10mm screws:
 
     ![](images/Fix_Base.jpg)
+
 
 ## Water-proofing the control unit connections
 
 
-1.  Now you can attach the rain gauge. Remove the rubber seal from the
-    side of the case:
+1.  Now you can attach the rain gauge. Remove the rubber seal from the side of the case:
 
     ![](images/Remove_Seal.jpg)
 
-1.  Remove the 12mm plastic nut from the grommet on the rain gauge RJ11
-    cable:
+1.  Remove the 12mm plastic nut from the grommet on the rain gauge RJ11 cable:
 
     ![](images/Remove_Nut.jpg)
 
@@ -199,13 +192,11 @@ For this stage, you will need:
 
     ![](images/Push_Through.jpg)
 
-1.  Push the threaded end of the grommet through the seal. Twisting
-    might make this easier.
+1.  Push the threaded end of the grommet through the seal. Twisting might make this easier.
 
     ![](images/Twisting_Through.jpg)
 
-1.  Feed the plastic nut back onto the RJ11 cable and thread it onto the
-    grommet:
+1.  Feed the plastic nut back onto the RJ11 cable and thread it onto the grommet:
 
     ![](images/Plastic_Nut.jpg)
 
@@ -219,8 +210,7 @@ For this stage, you will need:
 
     ![](images/Attach_RJ11.jpg)
 
-1.  Tighten the outer end of the grommet so it grips the cable and forms
-    a watertight seal.
+1.  Tighten the outer end of the grommet so it grips the cable and forms a watertight seal.
 
 ![](images/Fix_Grommit.jpg)
 
