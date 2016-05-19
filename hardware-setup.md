@@ -153,6 +153,8 @@ Setting up the air sensor housing.
 
     ![](images/Connect_Air.jpg)
 
+**IMPORTANT**: Don't put the rubber seals back in or try to seal the cables with glands -- the sensors need to be exposed to the air and this is why they live in a separate box.
+
 Assembling the Control Unit Housing
 -----------------------------------
 
