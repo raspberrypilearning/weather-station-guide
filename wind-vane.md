@@ -58,13 +58,11 @@ Analogue and digital both have their place, and often one works better for a par
 
 ### Analogue to digital conversion
 
-<<<<<<< HEAD
 To do this we're going to use a clever microchip called an [Analogue to Digital Converter](http://en.wikipedia.org/wiki/Analog-to-digital_converter) or ADC for short. The weather expansion board has one of these built in (as do most games consoles). An ADC chip, like the one above, has a number of input pins. One of them is connected to the voltage going through the wind vane. We don't need to worry about the internal workings of the chip we just need to understand that it can convert from a continuous analogue voltage to a number (in code) that represents the voltage *magnitude*. More voltage will give a higher number, less voltage a lower one.
-=======
+
 To recap: the wind vane has a voltage going through it, and this will vary according to which resistors are switched in and out by the reed switches and magnet. The challenge we face is being able to observe this analogue signal changing on a computer, which is a digital machine.
 
 To do this we're going to use a clever microchip called an [analogue to digital converter](http://en.wikipedia.org/wiki/Analog-to-digital_converter), or ADC for short. The weather station board has one of these built-in (as do most games consoles). An ADC chip, like the one above, has a number of input pins. One of them is connected to the voltage going through the wind vane. We don't need to worry about the internal workings of the chip. We just need to understand that it can convert from a continuous analogue voltage to a number (in code) that represents the magnitude of the voltage. More voltage will give a higher number, and less voltage a lower one.
->>>>>>> origin/master
 
 ## How does the sensor connect?
 
