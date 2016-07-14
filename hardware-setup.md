@@ -35,6 +35,8 @@
 1.  Attach the 40-pin extender to the Raspberry Pi:
 
     ![](images/Attach_Extender.jpg)
+    
+    **IMPORTANT:** If the pins on your extender are longer and thinner than those shown in the picture, see the note in step 9.  
 
 1.  Take the Weather Station HAT and carefully snap it in two, along one
     of the scored lines:
@@ -52,6 +54,8 @@
 1.  Attach the HAT to the Raspberry Pi:
 
     ![](images/Attach_Hat.jpg)
+    
+    **IMPORTANT:** IF the pins on the extender poke out of the top of the HAT, it is recommended that you ensure proper contact by bending the pins gently outward on each side, away from the centre. Please see the advice on our [forums](https://www.raspberrypi.org/forums/viewtopic.php?f=112&t=149912&p=985419#p985419) for futher information.
 
 1.  Secure the hat using the 6mm screws:
 
