@@ -22,6 +22,6 @@ If you have received a Raspberry Pi Weather Station, then you first task will be
    ![](images/register08.png)
 1. You now need to complete the details for your Weather Station. You can choose any name you like, although it is probably best to keep it fairly short.
    ![](images/register10.png)
-1. To find your Longitude and Latitude, if you don't already know it, you can use Google Maps. Clicking on your location on Google Maps will reveal your Longitude and Latitude at the bottom of the screen.
+1. Longitude and latitude are used to identify the location of your weather station. Latitude specifies the north–south position of a point on the Earth's surface. Longitdue specifies the east-west position of a point on the Earth's surface. To find your Longitude and Latitude, if you don't already know it, you can use Google Maps. Clicking on your location on Google Maps will reveal your Longitude and Latitude at the bottom of the screen. The first number is your latitude and the second is you longitude.
    ![](images/register13.png)
 1. Once you have completed all the fields and clicked on `Create`, the next screen will now show your weather station. You should make a note of the `Passcode` as you will need this when it comes to setting up your Weather Station.
