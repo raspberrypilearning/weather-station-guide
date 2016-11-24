@@ -1,6 +1,6 @@
 # Raspberry Pi weather station
 
-![](cover0.png)
+![](cover.png)
 
 The weather station kit is a HAT for the Raspberry Pi which allows it to collect weather data, using a variety of sensors. It's designed for use in schools to enable students to create their own weather station, and has a range of resources to support its use.
 
@@ -11,17 +11,12 @@ As well as logging data locally, schools that received a free weather station ca
 
 ## How to set up your weather station
 
-1. [Put the kit together](hardware-setup.md)
-1. [Set up the software](software-setup.md)
+1. [Register your Weather Station](register.md)
+1. [Put the kit together part I](build.md)
+1. [Set up the software](software.md)
+1. [Put the kit together part II](build2.md)
+1. [Testing your Weather Station](test.md)
 1. [Install the weather station outside](siting.md)
-
-
-## Exploring the sensors
-
-- [Rain gauge](rain-gauge.md)
-- [Anemometer](anemometer.md)
-- [Wind vane](wind-vane.md)
-- [Temperature probe](temp-probe.md)
 
 ## Resources
 
