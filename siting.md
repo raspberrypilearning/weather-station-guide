@@ -1,5 +1,7 @@
 # Installing your weather station outside
 
+Now you are ready to install your weather station, unplug the keyboard, mouse and monitor and seal up the main enclosure, to ensure it is watertight.
+
 We can’t give specific instructions for siting the station, as this depends on your school and environment. We’ve mounted them on walls, rooftops, fences, and even plumbing pipes stuck in the ground. As long as the sensors are open to the elements, then that’s fine. To state the obvious:
 
 - the rain gauge needs to collect rain 
@@ -13,3 +15,9 @@ You may not be able to find an ideal location. Perhaps trees block the wind, or 
 ## Stevenson screen
 
 One way to improve your weather readings is to house it in a [Stevenson screen](http://www.weatherforschools.me.uk/html/settingup.html). You can find some ideas for building your own [here](http://www.weatherforschools.me.uk/html/weatherboxes.html#homemade), and there are plenty of plans on the web. Again, this is an excellent opportunity for students and other school departments to get involved.
+
+## What Next?
+Why not try out some of our Weather Station resource on [raspberrypi.org](https://raspberrypi.org) to learn how to access the Oracle Database and play with weather station data from around the world.
+- [Fetching the Weather](https://www.raspberrypi.org/learning/fetching-the-weather/)
+- [Graphing the Weather](https://www.raspberrypi.org/learning/graphing-the-weather/)
+- [Mapping the Weather](https://www.raspberrypi.org/learning/mapping-the-weather/)

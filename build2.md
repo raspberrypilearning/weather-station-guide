@@ -1,5 +1,5 @@
 # Weather Station Build Part II
-
+## Setting up the Air Sensor board
 1. You'll need the following parts to set up the *Weather Station Sensors*
    
    ![](images/build_20.jpg)
@@ -27,6 +27,8 @@
 
 1. You can now secure the lid of the box. Do not try and place the *grommets* back into the box. The sensors on the board need to be able to have air flowing around them.
 
+## Setting up the other sensors
+
 1. Take the larger container and your mounted Raspberry Pi, with all cables removed.
 
 	![](images/build_28.jpg)
@@ -35,7 +37,7 @@
 
 	![](images/build_29.jpg)
 	
-1. Remove the three *grommets* from the port side of the box. Using a sharp knife or scalple, remove the first of the small circles from one of the grommets.
+1. Remove the three *grommets* from the port side of the box. Using a sharp knife or scalpel, remove the first of the small circles from one of the grommets.
 
 	![](images/build_30.jpg)
 	
@@ -55,17 +57,17 @@
 
 	![](images/build_34.jpg)
 	
-1. You can now connect the *Annenometer* to the *Weather Vane*.
+1. You can now connect the *Anemometer* to the *Weather Vane*.
 
 	![](images/build_36.jpg)
 	
-1. Repeat the above steps for attaching the fixing assembly aroudn the *grommet*
+1. Repeat the above steps for attaching the fixing assembly around the *grommet*
 	
 1. Replace both of the *grommets* into the housing, and tighten the fixing assemblies so that they form a seal around the *RJ11* cables.
 
 	![](images/build_35.jpg)
 	
-1. The *RJ11* cable that runs from the *Air Sensor board* uses one of the large black plastic fixing assemblies included in the kit. Dissassemble the assemble.
+1. The *RJ11* cable that runs from the *Air Sensor board* uses one of the large black plastic fixing assemblies included in the kit. Disassemble the assemble.
 
 	![](images/build_37.jpg)
 	
@@ -85,11 +87,11 @@
 
 	![](images/build_41.jpg)
 	
-1. Remove a *grommet* from the side of the housing, oposite the Raspberry Pi's ethernet port. Cut 2 circles from the *grommet* and then thread it along with a large fixing assemble over your ethernet cable.
+1. Remove a *grommet* from the side of the housing, opposite the Raspberry Pi's Ethernet port. Cut 2 circles from the *grommet* and then thread it along with a large fixing assemble over your Ethernet cable.
 
 	![](images/build_42.jpg)
 	
-1. Place the *grommet* back into the housing, then attach the POE adaptor. All the cables can now be plugged into their labeled ports.
+1. Place the *grommet* back into the housing, then attach the POE adaptor. All the cables can now be plugged into their labelled ports.
 
 	![](images/build_44.jpg)
 	
@@ -97,3 +99,5 @@
 
 	![](images/build_45.jpg)
 	
+## What Next?
+1. If you have not yet setup the software, then head on over to the [Software Guide](software.md), to configure the Weather Station. If you have done this already, then you can proceed to [Testing you Weather Station](test.md)
