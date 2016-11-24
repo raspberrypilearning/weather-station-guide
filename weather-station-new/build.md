@@ -25,7 +25,7 @@
    ![](images/build_15.jpg)
 1. You can now plug in a keyboard, mouse, Ethernet cable, and HDMI cable to the Raspberry Pi.
    ![](images/build_16.jpg)
-1. To power your Raspberry Pi, you could use a standard 5V power supply or the include *Power Over Ethernet* (PO£) kit.
+1. To power your Raspberry Pi, you could use a standard 5V power supply or the include *Power Over Ethernet* (POE) kit.
    ![](images/build_17.jpg)
 1. Connect an Ethernet cable (not included) to the two POE adaptors. then plug in the power supply to the appropriate adaptor.
    ![](images/build_18.jpg)
