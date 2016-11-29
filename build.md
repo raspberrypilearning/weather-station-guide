@@ -17,7 +17,7 @@
 
    ![](images/build_06.jpg)
 
-1. Use the 4 x 8mm fixing screws and the 4 hex spacers to affix the Raspberry Pi to its acrylic base. Then place the CN19895 receptacle over the Raspberry Pi's GPIO pins.
+1. Use the four 8mm fixing screws and the four hex spacers to affix the Raspberry Pi to its acrylic base. Then place the CN19895 receptacle over the Raspberry Pi's GPIO pins.
 
    ![](images/build_07.jpg)
 
@@ -38,7 +38,7 @@
 
    ![](images/build_12.jpg)
 
-1. Use the 4 x 6mm fixing screws to secure the weather board to the Raspberry Pi.
+1. Use the four 6mm fixing screws to secure the weather board to the Raspberry Pi.
 
    ![](images/build_13.jpg)
 
@@ -53,11 +53,11 @@
 
    ![](images/build_16.jpg)
 
-1. To power your Raspberry Pi, you could use a standard 5V power supply or the Power Over Ethernet (POE) kit, which is included.
+1. To power your Raspberry Pi, you could use a standard 5V power supply or the power over Ethernet (PoE) kit, which is included.
 
    ![](images/build_17.jpg)
 
-1. Connect an Ethernet cable (not included) to the two POE adaptors. Plug the power supply into the appropriate adaptor.
+1. Connect an Ethernet cable (not included) to the two PoE adaptors. Plug the power supply into the appropriate adaptor.
 
    ![](images/build_18.jpg)
 
@@ -67,4 +67,4 @@
 
 ## What Next
 
-1. You can now proceed to the [Software Setup](software.md), or if you prefer, you can continue to the [Building your Weather Station Part II](build2.md)
+1. You can now proceed to the [Software Setup](software.md), or if you prefer, you can continue to [Building your Weather Station Part II](build2.md).
