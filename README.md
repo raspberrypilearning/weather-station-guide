@@ -11,10 +11,10 @@ As well as logging data locally, schools that received a free Weather Station ca
 
 ## How to set up your Weather Station
 
-1. [Register your Weather Station](register.md)
-1. [Put the kit together part I](build.md)
+1. [Registering your Weather Station](register.md)
+1. [Building your Weather Station Part I](build.md)
 1. [Set up the software](software.md)
-1. [Put the kit together part II](build2.md)
+1. [Building your Weather Station Part II](build2.md)
 1. [Testing your Weather Station](test.md)
 1. [Install the Weather Station outside](siting.md)
 
