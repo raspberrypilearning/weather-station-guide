@@ -75,7 +75,7 @@
 
 	![](images/build_38.jpg)
 	
-1. As the fixing assembly is a little large for the RJ11 cable, wrap the end with a little duct tape or electrician's tape.
+1. As the fixing assembly is a little large for the RJ11 cable, wrap the end of the cable with a little duct tape or electrician's tape.
 
 	![](images/build_39.jpg)
 	
