@@ -67,4 +67,4 @@
 
 ## What Next
 
-1. You can now proceed to the [Software Setup](software.md), or if you prefer, you can continue to [Building your Weather Station Part II](build2.md).
+1. You can now proceed to the [Software Setup](software.md) or, if you prefer, you can continue to [Building your Weather Station Part II](build2.md).
