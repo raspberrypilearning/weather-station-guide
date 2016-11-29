@@ -37,7 +37,7 @@
 
 	![](images/build_29.jpg)
 	
-1. Remove the three grommets from the port side of the box. Using a sharp knife or scalpel, remove the first of the small circles from one of the grommets.
+1. Remove the three grommets from the side of the box opposite the three ports. Using a sharp knife or scalpel, remove the first of the small circles from one of the grommets.
 
 	![](images/build_30.jpg)
 	
