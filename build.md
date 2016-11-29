@@ -13,7 +13,7 @@
 
    ![](images/build_04.jpg)
 
-1. Remove the contents of Board Mounting Kit.
+1. Remove the contents of board mounting kit.
 
    ![](images/build_06.jpg)
 
