@@ -43,7 +43,7 @@ sudo ./upload_to_oracle
 
 ![](images/test_03.png)
 
-1. On your dashboard, click on Weather Measurements to view the latest measurements from your Weather Station.
+1. On your dashboard, click on Weather Measurement to view the latest measurements from your Weather Station.
 
 ![](images/test_04.png)
 
