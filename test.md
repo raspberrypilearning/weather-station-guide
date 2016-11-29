@@ -1,6 +1,6 @@
 # Testing your Weather Station
 
-With all your sensors connected, it's a good idea to test that your weather station is recording data and that it is able to upload it to the Oracle database.
+With all your sensors connected, it's a good idea to confirm that your weather station is recording data and that it is able to upload it to the Oracle database.
 
 ## Manipulate and measure the sensors
 1. The anemometer and rain gauge can be manipulated as neither will be recording data unless they are physically moved. Spinning the anemometer and tilting the rain gauge back and forth a few times while the next set of instructions are followed will result in some data being logged. 
