@@ -7,7 +7,7 @@ There are a few steps involved in setting up the software for the Weather Statio
 1. Follow the [guide on the Raspberry Pi website](https://www.raspberrypi.org/learning/software-guide/) which tells you how to install the latest version of Raspbian.
 
 ## Setting up the Sensing and Database software.
-1. The simplest way to set the software up is to use a simple install script. If you wish to proceed manually through the steps, then you can follow [this guide](), but is only recommended if you have a firm understanding of command line interfaces, enjoy unnecessary labour, or want to make custom adjustments to your setup.
+1. The simplest way to set the software up is to use a simple install script. If you wish to proceed manually through the steps, then you can follow [this guide](), but this is only recommended if you have a firm understanding of command line interface, enjoy unnecessary labour, or want to make custom adjustments to your setup.
 
 1. When Raspbian boots up, press **Ctrl** and **Alt** and the character **t** on your keyboard. This will open up a terminal prompt.
 
