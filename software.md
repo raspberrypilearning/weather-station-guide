@@ -30,11 +30,17 @@ There are a few steps involved in setting up the software for the Weather Statio
 	![](images/install_01.png)
     - When prompted, type **y** if the time displayed is correct.
 	![](images/install_02.png)
-	- If the time is incorrect type **n** and then enter the correct time in the format `yyyy-mm-dd hh:mm:ss`
+	
+	- If the time is incorrect, type **n** and then enter the correct time in the format `yyyy-mm-dd hh:mm:ss`.
+	
 	![](images/install_03.png)
+	
 	- Next you will need to choose a database password. It can be anything you like, as it is the password for the local database on your Raspberry Pi. Write the password down somewhere so you do not forget it.
+	
 	![](images/install_04.png)
+	
 	- Next you need to type in the Weather Station name and password/key that you learned when you registered your Weather Station.
+	
 	![](images/install_05.png)
 	
 1. Once the install has finished, your Raspberry Pi should reboot. You can now proceed to setting up the rest of the hardware.
