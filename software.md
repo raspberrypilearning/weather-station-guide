@@ -1,7 +1,7 @@
 # Weather Station Software Setup
 
-There are a few steps involved in setting up the software for the Weather Station. Before commencing on this section, please ensure that you have [registered your School and Weather Station on the Oracle Database]()
-.
+There are a few steps involved in setting up the software for the Weather Station. Before beginning this section, please ensure that you have [registered your School and Weather Station on the Oracle Database]()
+
 ## Getting the latest Raspberry Pi OS
 1. The microSD card that comes with the Weather Station kit contains a, now, out-of-date version of Raspbian, the Raspberry Pi Operating System.
 1. Follow the [guide on the Raspberry Pi website](https://www.raspberrypi.org/learning/software-guide/), on how to get the latest version of Raspbian onto your microSD card.
