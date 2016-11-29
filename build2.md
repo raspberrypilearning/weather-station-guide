@@ -8,7 +8,7 @@
 
 	![](images/build_21.jpg)
 	
-1. Use the fixing screws, fixing nuts and the PCB spacers to affix the board to the base.
+1. Use the fixing screws, fixing nuts, and the PCB spacers to affix the board to the base.
 
 	![](images/build_22.jpg)
 	
