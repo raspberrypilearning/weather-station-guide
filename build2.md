@@ -87,7 +87,7 @@
 
 	![](images/build_41.jpg)
 	
-1. Remove a grommet from the side of the housing opposite the Raspberry Pi's Ethernet port. Cut two circles from the grommet and then thread it along with a large fixing assembly over your Ethernet cable.
+1. Remove a grommet from the side of the housing opposite the Raspberry Pi's Ethernet port. Cut two circles from the grommet and then thread it over your Ethernet cable along with a large fixing assembly.
 
 	![](images/build_42.jpg)
 	
@@ -95,7 +95,7 @@
 
 	![](images/build_44.jpg)
 	
-1. You can remove some more grommets at this point, plug in an HDMI cable, mouse, and keyboard. This will allow you to install the software, if you have not done so already, or test that the software is working.
+1. You can remove some more grommets at this point, and plug in an HDMI cable, mouse, and keyboard. This will allow you to install the software, if you have not done so already, or test that the software is working.
 
 	![](images/build_45.jpg)
 	
