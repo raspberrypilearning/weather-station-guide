@@ -1,4 +1,4 @@
-# Weather Station Build Part II
+# Building your Weather Station Part II
 ## Setting up the Air Sensor board
 1. You'll need the following parts to set up the Weather Station sensors.
    
