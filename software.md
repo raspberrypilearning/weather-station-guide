@@ -7,7 +7,7 @@ There are a few steps involved in setting up the software for the Weather Statio
 1. Follow the [guide on the Raspberry Pi website](https://www.raspberrypi.org/learning/software-guide/), on how to get the latest version of Raspbian onto your microSD card.
 
 ## Setting up the Sensing and Database software.
-1. The simplest way to setup the software, is to use the a simple install script. If you wish to manually proceed through the steps, then you can follow [this guide](), but is only recommended if you have a firm understanding of command line interfaces, enjoy unnecessary labour or want to make custom adjustments to your setup.
+1. The simplest way to setup the software, is to use the a simple install script. If you wish to manually proceed through the steps, then you can follow [this guide](manual-setup.md), but is only recommended if you have a firm understanding of command line interfaces, enjoy unnecessary labour or want to make custom adjustments to your setup.
 
 1. When Raspbian boots up, press `Ctrl` and `Alt` and the character `t` on your keyboard. This will open up a terminal prompt.
 
@@ -40,4 +40,5 @@ There are a few steps involved in setting up the software for the Weather Statio
 1. Once the install has finished, your Raspberry Pi should reboot. You can now proceed to setting up the rest of the hardware.
 
 ## What Next?
+
 You can now proceed to finishing the hardware setup with our [Hardware Guide](build2.md) or testing the sensors with our [Testing Guide](test.md) if you've already finished the assembly.
