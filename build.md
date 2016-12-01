@@ -38,7 +38,7 @@
 
    ![](images/build_12.jpg)
 
-1. Use the four 6mm fixing screws to secure the weather board to the Raspberry Pi.
+1. Use the four 6mm screws to secure the weather board to the Raspberry Pi.
 
    ![](images/build_13.jpg)
 
