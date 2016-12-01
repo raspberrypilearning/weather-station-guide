@@ -17,7 +17,7 @@
 
    ![](images/build_06.jpg)
 
-1. Use the four 8mm fixing screws and the four hex spacers to affix the Raspberry Pi to its acrylic base. Then place the CN19895 receptacle over the Raspberry Pi's GPIO pins.
+1. Use the four 8mm screws and the four hex spacers to affix the Raspberry Pi to its acrylic base. Then place the CN19895 receptacle over the Raspberry Pi's GPIO pins.
 
    ![](images/build_07.jpg)
 
