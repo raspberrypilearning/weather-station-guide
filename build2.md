@@ -33,7 +33,7 @@
 
 	![](images/build_28.jpg)
 
-1. Affix the base to the container.
+1. Affix the base to the container using the remaining 10mm screws.
 
 	![](images/build_29.jpg)
 	
@@ -87,7 +87,7 @@
 
 	![](images/build_41.jpg)
 	
-1. Remove a grommet from the side of the housing opposite the Raspberry Pi's Ethernet port. Cut two circles from the grommet and then thread it over your Ethernet cable along with a large fixing assembly.
+1. Remove a grommet from the side of the housing opposite the Raspberry Pi's Ethernet port. Cut two circles from the grommet and then thread it over your Ethernet cable (not included) along with a large fixing assembly. You may find the Ethernet cable hard to fit through the fixing. If so, you can carefully trim material from the sides of the Ethernet cable with a sharp scalpel until it will fit through, being careful not to cut any of the cables. 
 
 	![](images/build_42.jpg)
 	
@@ -100,4 +100,4 @@
 	![](images/build_45.jpg)
 	
 ## What Next?
-1. If you have not yet set up the software, then head on over to the [Software Guide](software.md), to configure the Weather Station. If you have done this already, then you can proceed to [Testing you Weather Station](test.md).
+1. If you have not yet set up the software, then head on over to the [Software Guide](software.md), to configure the Weather Station. If you have done this already, then you can proceed to [Testing your Weather Station](test.md).

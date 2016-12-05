@@ -28,7 +28,7 @@ With all your sensors connected, it's a good idea to confirm that your weather s
 1. The next step is to test that the software is capable of uploading the data to the online Oracle Database. To test this, type the following into the terminal:
 
   ```bash
-  sudo ./upload_to_oracle
+  sudo ./upload_to_oracle.py
   ```
 
 1. You should see output as shown the screen capture below.
