@@ -51,4 +51,8 @@ With all your sensors connected, it's a good idea to confirm that your weather s
 
 ## What Next?
 
-Now that you have tested your Weather Station, close up the boxes and ensure the grommets are in place. You can then proceed to the next section, and learn how to [install the Weather Station at your school](siting.md).
+Now that you have tested your Weather Station, close up the boxes with the long screws and ensure the grommets are in place. 
+
+	![](images/close_up_station.png)
+
+You can then proceed to the next section, and learn how to [install the Weather Station at your school](siting.md).
