@@ -20,7 +20,7 @@ As well as logging data locally, schools that received a free Weather Station ca
 
 ## Resources
 
-- [Sensing the Weather](https://github.com/raspberrypilearning/sensing-the-weather): a series of cross-curricular lessons exploring measuring, collecting, and analysing weather data in order to predict the weather.
+- [Sensing the Weather](https://www.raspberrypi.org/learning/sensing-the-weather): a series of cross-curricular lessons exploring measuring, collecting, and analysing weather data in order to predict the weather.
 - [Weather Station web page](https://www.raspberrypi.org/weather-station)
 - Get support (or show off your Weather Station!) on [our forum](https://www.raspberrypi.org/forums/viewforum.php?f=112).
 
