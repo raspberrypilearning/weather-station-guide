@@ -98,6 +98,10 @@
 1. You can remove some more grommets at this point, and plug in an HDMI cable, mouse, and keyboard. This will allow you to install the software, if you have not done so already, or test that the software is working.
 
 	![](images/build_45.jpg)
+
+1. Before you do, eventually, seal your box and site it, don't forget to place the Silica gel inside. This will help absorb any moisture in the air and ensure that your Raspberry Pi does not corrode.
+
+        ![](images/silica.jpg)
 	
 ## What Next?
 1. If you have not yet set up the software, then head on over to the [Software Guide](software.md), to configure the Weather Station. If you have done this already, then you can proceed to [Testing your Weather Station](test.md).
