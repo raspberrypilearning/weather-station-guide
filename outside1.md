@@ -2,7 +2,7 @@
 
 The Raspberry Pi weather station is a fantastic kit that we have sent out to nearly one thousand schools across the world. It enables students to make scientific measurements about the climate and upload them to a central Oracle database.
 
-We've made our weather station easy to assemble and get up and running, but we know that the trickiest part of setting it up actually can be installing the equipment outdoors. Since every set-up location is different, it is impossible to create a guide to exactly suit everyone. However, this guide is intended to provide some helpful instructions that you can hopefully adapt to meet your particular needs.
+We've made our weather station easy to assemble and get up and running, but we know that the trickiest part of setting it up can be installing the equipment outdoors. Since every set-up location is different, it is impossible to create a guide to exactly suit everyone. However, this guide is intended to provide some helpful instructions that you can hopefully adapt to meet your particular needs.
 
 ## From where the wind blows
 
@@ -10,7 +10,7 @@ This guide focusses on the wind sensors. The weather station kit comes with a we
 
    ![](images/wind1.jpg)
 
- A really simple way to mount the wind sensors is to screw them to the edge of a wooden roof. As long as the scoops can spin freely, you will be able to record wind readings, although you may need to adjust your measurements to compensate for the effects of being so close to the flat roof itself. Working out the best way to measure the required adjustment can be an interesting experiment in itself!
+ A really simple way to mount the wind sensors is to screw them to the edge of a wooden fence or roof. As long as the scoops can spin freely, you will be able to record wind readings, although you may need to adjust your measurements to compensate for the effects of being so close to the flat roof itself. Working out the best way to measure the required adjustment can be an interesting experiment in itself!
 
 ##  High (but not dry)
 
@@ -18,36 +18,35 @@ Positioning the instruments a little higher can be cheap and easy: all you need 
 
 1. Here's how to make a simple T-shaped mast.
 
-   ![](images/wind2.jpg)
+  ![](images/wind2.jpg)
 
-1.  Measure and mark out a spot approximately 3cm from one end of the 40mm pipe. Clamp the pipe securely in a vice or work bench and then drill a 22mm hole all the way through. Sand off the loose fibres from around the hole.
+2.  Measure and mark out a spot approximately 3cm from one end of the 40mm pipe. Clamp the pipe securely in a vice or work bench and then drill a 22mm hole all the way through. Sand off the loose fibres from around the hole.
 
 	![](images/wind3.png)
 
-1. Then cut a 30cm length of the 22mm diameter pipe. Simply slide this through the hole in the wider pipe and voila! You've made your T-shaped mast!
+3. Then cut a 30cm length of the 22mm diameter pipe. Simply slide this through the hole in the wider pipe and voila! You've made your T-shaped mast!
 
 	![](images/wind4.jpg)
 
 ## Mounting the sensors
 
-1. To attach the weather vane and anemometer to the mast, drill two 5mm diameter holes through the narrower pipe (one at each end) and use a nut and bolt to affix the sensors. Alternatively, if you have access to a 3D printer, you can manufacture some brackets to fix the vane and anemometer even more securely. Either download the [STL files](https://www.thingiverse.com/thing:2360682) for these brackets, or design some yourself!
+4. To attach the weather vane and anemometer to the mast, drill two 5mm diameter holes through the narrower pipe (one at each end) and use a nut and bolt to affix the sensors. Alternatively, if you have access to a 3D printer, you can manufacture some brackets to fix the vane and anemometer even more securely. Either download the [STL files](https://www.thingiverse.com/thing:2360682) for these brackets, or design some yourself!
 
 	![](images/wind5.jpg)
-    ![](images/wind6.jpg)
+  ![](images/wind6.jpg)
 
-2. Before final assembly, thread the sensor cables up through the wider pipe to stop them flapping around in strong gusts.
+5. Before final assembly, thread the sensor cables up through the wider pipe to stop them flapping around in strong gusts.
 
 	![](images/wind7.jpg)
 
 ## Mast ahoy!
 
-Another great thing about plumbing pipes is that there are plenty of cheap mounting brackets available to help a affix your mast to any surface or wall. The side of a wooden shed or hut is ideal but you can also attach the mast to the brickwork of a building.
+6. Another great thing about plumbing pipes is that there are plenty of cheap mounting brackets available to help affix your mast to any surface or wall. The side of a wooden shed or hut is ideal but you can also attach the mast to the brickwork of a building.
 
-    ![](images/wind8.jpg)
+  ![](images/wind6.jpg)
 
-1. Once everything is ready, connect the sensors to the main weather station board and test that they are working correctly. It is much easier to adjust a loose cable before hoisting the mast into position! Use cable ties to keep the last few centimetres of cables under control where they emerge from the pipe. This will also provide a 'safety line' for the sensors themselves, should the mounting brackets break (remember that common 3D printing materials have a limited lifespan when exposed to the elements and may require replacing from time to time).
+7. Once everything is ready, connect the sensors to the main weather station board and test that they are working correctly. It is much easier to adjust a loose cable before hoisting the mast into position! Use cable ties to keep the last few centimetres of cables under control where they emerge from the pipe. This will also provide a 'safety line' for the sensors themselves, should the mounting brackets break (remember that common 3D printing materials have a limited lifespan when exposed to the elements and may require replacing from time to time).
 
     ![](images/wind9.jpg)
 
 ## What Next?
-2. If you have not yet set up the software, then head on over to the [Software Guide](software.md), to configure the Weather Station. If you have done this already, then you can proceed to [Testing your Weather Station](test.md).
