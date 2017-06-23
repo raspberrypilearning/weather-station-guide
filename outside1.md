@@ -1,6 +1,6 @@
 # Installing your Weather Station outside Part I: Wind sensors
 
-The Raspberry Pi weather station is a fantastic kit that we have sent out to about one thousand schools across the world. It enables students to make scientific measurements about the climate and upload them to a central Oracle database.
+The Raspberry Pi weather station is a fantastic kit that we have sent out to nearly one thousand schools across the world. It enables students to make scientific measurements about the climate and upload them to a central Oracle database.
 
 We've made our weather station easy to assemble and get up and running, but we know that the trickiest part of setting it up actually can be installing the equipment outdoors. Since every set-up location is different, it is impossible to create a guide to exactly suit everyone. However, this guide is intended to provide some helpful instructions that you can hopefully adapt to meet your particular needs.
 
@@ -16,7 +16,7 @@ This guide focusses on the wind sensors. The weather station kit comes with a we
 
 Positioning the instruments a little higher can be cheap and easy: all you need are some readily available plumbing spares from the hardware store to build a mast. Standard polypropylene waste pipes are light, strong, and easy to work with. Even better, a typical 3m length of 40mm diameter pipe is just right for the cables that come with our kits, and a common 22mm diameter pipe is great for mounting the sensors. Of course you don't have to use the full length of pipe if you don't need to.
 
-Here's how to make a simple T-shaped mast.
+1. Here's how to make a simple T-shaped mast.
 
    ![](images/wind2.jpg)
 
@@ -43,11 +43,11 @@ Here's how to make a simple T-shaped mast.
 
 Another great thing about plumbing pipes is that there are plenty of cheap mounting brackets available to help a affix your mast to any surface or wall. The side of a wooden shed or hut is ideal but you can also attach the mast to the brickwork of a building.
 
-	![](images/wind8.jpg)
+    ![](images/wind8.jpg)
 
 1. Once everything is ready, connect the sensors to the main weather station board and test that they are working correctly. It is much easier to adjust a loose cable before hoisting the mast into position! Use cable ties to keep the last few centimetres of cables under control where they emerge from the pipe. This will also provide a 'safety line' for the sensors themselves, should the mounting brackets break (remember that common 3D printing materials have a limited lifespan when exposed to the elements and may require replacing from time to time).
 
-     ![](images/wind9.jpg)
+    ![](images/wind9.jpg)
 
 ## What Next?
 2. If you have not yet set up the software, then head on over to the [Software Guide](software.md), to configure the Weather Station. If you have done this already, then you can proceed to [Testing your Weather Station](test.md).
