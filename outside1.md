@@ -27,7 +27,7 @@ Here's how to make a simple T-shaped mast.
 
 	![](images/wind4.jpg)
 
-##Mounting the sensors
+## Mounting the sensors
 
 1. To attach the weather vane and anemometer to the mast, drill two 5mm diameter holes through the narrower pipe (one at each end) and use a nut and bolt to affix the sensors. Alternatively, if you have access to a 3D printer, you can manufacture some brackets to fix the vane and anemometer even more securely. Either download the [STL files](https://www.thingiverse.com/thing:2360682) for these brackets, or design some yourself!
 
@@ -38,7 +38,7 @@ Here's how to make a simple T-shaped mast.
 
 	![](images/wind7.jpg)
 
-##Mast ahoy!
+## Mast ahoy!
 
 Another great thing about plumbing pipes is that there are plenty of cheap mounting brackets available to help a affix your mast to any surface or wall. The side of a wooden shed or hut is ideal but you can also attach the mast to the brickwork of a building.
 
