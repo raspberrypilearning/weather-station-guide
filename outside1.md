@@ -18,35 +18,35 @@ Positioning the instruments a little higher can be cheap and easy: all you need 
 
 1. Here's how to make a simple T-shaped mast.
 
-  ![](images/wind2.jpg)
+![](images/wind2.jpg)
 
 2.  Measure and mark out a spot approximately 3cm from one end of the 40mm pipe. Clamp the pipe securely in a vice or work bench and then drill a 22mm hole all the way through. Sand off the loose fibres from around the hole.
 
-	![](images/wind3.png)
+![](images/wind3.png)
 
 3. Then cut a 30cm length of the 22mm diameter pipe. Simply slide this through the hole in the wider pipe and voila! You've made your T-shaped mast!
 
-	![](images/wind4.jpg)
+![](images/wind4.jpg)
 
 ## Mounting the sensors
 
 4. To attach the weather vane and anemometer to the mast, drill two 5mm diameter holes through the narrower pipe (one at each end) and use a nut and bolt to affix the sensors. Alternatively, if you have access to a 3D printer, you can manufacture some brackets to fix the vane and anemometer even more securely. Either download the [STL files](https://www.thingiverse.com/thing:2360682) for these brackets, or design some yourself!
 
-	![](images/wind5.jpg)
-  ![](images/wind6.jpg)
+![](images/wind5.jpg)
+![](images/wind6.jpg)
 
 5. Before final assembly, thread the sensor cables up through the wider pipe to stop them flapping around in strong gusts.
 
-	![](images/wind7.jpg)
+![](images/wind7.jpg)
 
 ## Mast ahoy!
 
 6. Another great thing about plumbing pipes is that there are plenty of cheap mounting brackets available to help affix your mast to any surface or wall. The side of a wooden shed or hut is ideal but you can also attach the mast to the brickwork of a building.
 
-  ![](images/wind6.jpg)
+![](images/wind6.jpg)
 
 7. Once everything is ready, connect the sensors to the main weather station board and test that they are working correctly. It is much easier to adjust a loose cable before hoisting the mast into position! Use cable ties to keep the last few centimetres of cables under control where they emerge from the pipe. This will also provide a 'safety line' for the sensors themselves, should the mounting brackets break (remember that common 3D printing materials have a limited lifespan when exposed to the elements and may require replacing from time to time).
 
-    ![](images/wind9.jpg)
+![](images/wind9.jpg)
 
 ## What Next?
