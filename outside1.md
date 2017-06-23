@@ -5,19 +5,20 @@ The Raspberry Pi weather station is a fantastic kit that we have sent out to abo
 We've made our weather station easy to assemble and get up and running, but we know that the trickiest part of setting it up actually can be installing the equipment outdoors. Since every set-up location is different, it is impossible to create a guide to exactly suit everyone. However, this guide is intended to provide some helpful instructions that you can hopefully adapt to meet your particular needs.
 
 ## From where the wind blows
+
 This guide focusses on the wind sensors. The weather station kit comes with a weather vane for measuring wind direction and an anemometer to record wind strength. Both of these are connected to the Pi via fairly long cables, so you needn't be constrained by having to fix them close to the box containing the hardware.
 
    ![](images/wind1.jpg)
 
  A really simple way to mount the wind sensors is to screw them to the edge of a wooden roof. As long as the scoops can spin freely, you will be able to record wind readings, although you may need to adjust your measurements to compensate for the effects of being so close to the flat roof itself. Working out the best way to measure the required adjustment can be an interesting experiment in itself!
 
-## High (but not dry)
+##  High (but not dry)
 
 Positioning the instruments a little higher can be cheap and easy: all you need are some readily available plumbing spares from the hardware store to build a mast. Standard polypropylene waste pipes are light, strong, and easy to work with. Even better, a typical 3m length of 40mm diameter pipe is just right for the cables that come with our kits, and a common 22mm diameter pipe is great for mounting the sensors. Of course you don't have to use the full length of pipe if you don't need to.
 
 Here's how to make a simple T-shaped mast.
 
-	![](images/wind2.jpg)
+   ![](images/wind2.jpg)
 
 1.  Measure and mark out a spot approximately 3cm from one end of the 40mm pipe. Clamp the pipe securely in a vice or work bench and then drill a 22mm hole all the way through. Sand off the loose fibres from around the hole.
 
@@ -34,7 +35,7 @@ Here's how to make a simple T-shaped mast.
 	![](images/wind5.jpg)
     ![](images/wind6.jpg)
 
-1. Before final assembly, thread the sensor cables up through the wider pipe to stop them flapping around in strong gusts.
+2. Before final assembly, thread the sensor cables up through the wider pipe to stop them flapping around in strong gusts.
 
 	![](images/wind7.jpg)
 
@@ -49,4 +50,4 @@ Another great thing about plumbing pipes is that there are plenty of cheap mount
      ![](images/wind9.jpg)
 
 ## What Next?
-1. If you have not yet set up the software, then head on over to the [Software Guide](software.md), to configure the Weather Station. If you have done this already, then you can proceed to [Testing your Weather Station](test.md).
+2. If you have not yet set up the software, then head on over to the [Software Guide](software.md), to configure the Weather Station. If you have done this already, then you can proceed to [Testing your Weather Station](test.md).
