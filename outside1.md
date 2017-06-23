@@ -20,7 +20,7 @@ Positioning the instruments a little higher can be cheap and easy: all you need 
 
    ![](images/wind2.jpg)
 
-2.  Measure and mark out a spot approximately 3cm from one end of the 40mm pipe. Clamp the pipe securely in a vice or work bench and then drill a 22mm hole all the way through. Sand off the loose fibres from around the hole.
+2. Measure and mark out a spot approximately 3cm from one end of the 40mm pipe. Clamp the pipe securely in a vice or work bench and then drill a 22mm hole all the way through. Sand off the loose fibres from around the hole.
 
    ![](images/wind3.png)
 
