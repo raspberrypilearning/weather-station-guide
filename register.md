@@ -37,10 +37,10 @@ If you have received a Raspberry Pi Weather Station, then your first task will b
 
 1. Once you have completed all the fields and clicked on **Create**, the next screen will now show your Weather Station. You should make a note of the passcode as you will need this when it comes to setting up your Weather Station.
 
-1. You will now see your weather wtation displayed on the **Your School** tab. The data shown will include your weather stations's passcode, which you will need when you set up the software.
+1. You will now see your weather wtation displayed on the **Your School** tab. The data shown will include your Weather Stations's passcode, which you will need when you set up the software.
 
 [](images/register12.png)
 
-## What Next?
+## What next?
 
-1. Now that your weather station has been registered, you can proceed to setting up all the hardware with our [Hardware Guide](build.md).
+1. Now that your Weather Station has been registered, you can proceed to setting up all the hardware with our [Hardware Guide](build.md).
