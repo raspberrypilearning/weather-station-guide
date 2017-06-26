@@ -6,7 +6,7 @@ This guide focuses on how to connect the weather station kit to a WiFi network s
 
 The Raspberry Pi Weather Station kit comes with Power over Ethernet (PoE) adapters so that you can connect it up outside using just one cable.
 
-   ![](images/build18.jpg)
+   ![](images/build_18.jpg)
 
 However, there are some situations where you might not need or be able to use a networking cable to reach your weather station.  For example you might site the kit in an outbuilding such as a storage hut of your school's playing field or on some other kind of shed. These can be good locations as they may be far from tall buildings while having their own power.
 
@@ -16,7 +16,7 @@ If you cannot use a networking cable, you could periodically retrieve the Weathe
 
 Alternatively, you can connect your Weather Station to a WiFi network. The Raspberry Pi 2 in the kit doesn't have built-in WiFi, but you can easily add a WiFi USB dongle. In fact, an external wireless device with a large antenna may be better suited for connecting to a network that is some distance away.
 
-   ![](images/wifi2.png)
+   ![](images/wifi2.jpg)
 
 # Choosing your site
 
