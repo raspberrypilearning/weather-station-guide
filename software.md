@@ -1,12 +1,12 @@
-# Weather Station Software Setup
+# Weather Station software setup
 
-There are a few steps involved in setting up the software for the Weather Station. Before beginning this section, please ensure that you have [registered your School and Weather Station on the Oracle Database](register.md).
+There are a few steps involved in setting up the software for the Weather Station. Before beginning this section, please ensure that you have [registered your School and Weather Station on the Oracle database](register.md).
 
 ## Getting the latest Raspberry Pi OS
 1. The SD card that comes with the Weather Station kit contains a now-out-of-date version of Raspbian, the Raspberry Pi operating system.
 1. Follow the [guide on the Raspberry Pi website](https://www.raspberrypi.org/learning/software-guide/) which tells you how to install the latest version of Raspbian.
 
-## Setting up the Sensing and Database software.
+## Setting up the sensing and database software.
 
 1. The simplest way to set the software up is to use a simple install script. If you wish to proceed manually through the steps, then you can follow [this guide](manual-setup.md), but this is only recommended if you have a firm understanding of command line interface, enjoy unnecessary labour, or want to make custom adjustments to your setup.
 
@@ -44,7 +44,7 @@ There are a few steps involved in setting up the software for the Weather Statio
 	
 1. Once the install has finished, your Raspberry Pi should reboot. You can now proceed to setting up the rest of the hardware.
 
-## What Next?
+## What next?
 
-You can now proceed to finishing the hardware setup with our [Hardware Guide](build2.md), or move on to testing the sensors with our [Testing Guide](test.md) if you've already finished the assembly.
+You can now proceed to finishing the hardware setup with our [hardware guide](build2.md), or move on to testing the sensors with our [testing guide](test.md) if you've already finished the assembly.
 
