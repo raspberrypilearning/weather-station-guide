@@ -1,10 +1,10 @@
 # Installing your Weather Station outside Part I: Wind sensors
 
-We've made our weather station easy to assemble and get up and running, but we know that the trickiest part of setting it up can be installing the equipment outdoors. Since every set-up location is different, it is impossible to create a guide to exactly suit everyone. However, this guide is intended to provide some helpful instructions that you can hopefully adapt to meet your particular needs.
+We've made our Weather Station easy to assemble and get up and running, but we know that the trickiest part of setting it up can be installing the equipment outdoors. Since every set-up location is different, it is impossible to create a guide to exactly suit everyone. However, this guide is intended to provide some helpful instructions that you can hopefully adapt to meet your particular needs.
 
 ## From where the wind blows
 
-This guide focusses on the wind sensors. The weather station kit comes with a weather vane for measuring wind direction and an anemometer to record wind strength. Both of these are connected to the Pi via fairly long cables, so you needn't be constrained by having to fix them close to the box containing the hardware.
+This guide focusses on the wind sensors. The Weather Station kit comes with a weather vane for measuring wind direction and an anemometer to record wind strength. Both of these are connected to the Pi via fairly long cables, so you needn't be constrained by having to fix them close to the box containing the hardware.
 
    ![](images/wind1.jpg)
 
@@ -43,17 +43,17 @@ Positioning the instruments a little higher can be cheap and easy: all you need 
 
    ![](images/wind6.jpg)
 
-7. Once everything is ready, connect the sensors to the main weather station board and test that they are working correctly. It is much easier to adjust a loose cable before hoisting the mast into position! Use cable ties to keep the last few centimetres of cables under control where they emerge from the pipe. This will also provide a 'safety line' for the sensors themselves, should the mounting brackets break (remember that common 3D printing materials have a limited lifespan when exposed to the elements and may require replacing from time to time).
+7. Once everything is ready, connect the sensors to the main Weather Station board and test that they are working correctly. It is much easier to adjust a loose cable before hoisting the mast into position! Use cable ties to keep the last few centimetres of cables under control where they emerge from the pipe. This will also provide a 'safety line' for the sensors themselves, should the mounting brackets break (remember that common 3D printing materials have a limited lifespan when exposed to the elements and may require replacing from time to time).
 
    ![](images/wind9.jpg)
 
-## What Next?
+## What next?
 
 There are loads of other ways you could mount your wind sensors - we'd love to see what you come up with: please share your builds with weather@raspberrypi.org
 
-If you haven't worked out how to connect your weather station to a network, why not have a look at at our [guide to using your kit with wifi](outside2.md)?
+If you haven't worked out how to connect your Weather Station to a network, why not have a look at at our [guide to using your kit with WiFi](outside2.md)?
 
-Or how about tackling some of our Weather Station resources on [raspberrypi.org](https://raspberrypi.org) to learn how to access the Oracle Database and play with data from around the world.
+Or how about tackling some of our Weather Station resources on [raspberrypi.org](https://raspberrypi.org) to learn how to access the Oracle database and play with data from around the world.
 - [Fetching the Weather](https://www.raspberrypi.org/learning/fetching-the-weather/)
 - [Graphing the Weather](https://www.raspberrypi.org/learning/graphing-the-weather/)
 - [Mapping the Weather](https://www.raspberrypi.org/learning/mapping-the-weather/)
