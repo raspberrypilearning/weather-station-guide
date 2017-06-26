@@ -1,6 +1,6 @@
 # Testing your Weather Station
 
-With all your sensors connected, it's a good idea to confirm that your weather station is recording data and that it is able to upload it to the Oracle database.
+With all your sensors connected, it's a good idea to confirm that your Weather Station is recording data and that it is able to upload it to the Oracle database.
 
 ## Manipulate and measure the sensors
 1. The anemometer and rain gauge can be manipulated as neither will be recording data unless they are physically moved. Spinning the anemometer and tilting the rain gauge back and forth a few times while the next set of instructions are followed will result in some data being logged. 
@@ -25,7 +25,7 @@ With all your sensors connected, it's a good idea to confirm that your weather s
 
 ## Upload to Oracle
 
-1. The next step is to test that the software is capable of uploading the data to the online Oracle Database. To test this, type the following into the terminal:
+1. The next step is to test that the software is capable of uploading the data to the online Oracle database. To test this, type the following into the terminal:
 
   ```bash
   sudo ./upload_to_oracle.py
@@ -39,7 +39,7 @@ With all your sensors connected, it's a good idea to confirm that your weather s
 
 ## Checking the online database
 
-1. In your web browser, navigate to the [Oracle Database](https://apex.oracle.com/pls/apex/f?p=81290:LOGIN_DESKTOP:0:::::&tz=1:00) and log in:
+1. In your web browser, navigate to the [Oracle database](https://apex.oracle.com/pls/apex/f?p=81290:LOGIN_DESKTOP:0:::::&tz=1:00) and log in:
 
   ![](images/test_03.png)
 
@@ -49,7 +49,7 @@ With all your sensors connected, it's a good idea to confirm that your weather s
 
 1. It is worth having a play around with the filters and the download options with your data, to see what can be achieved.
 
-## What Next?
+## What next?
 
 Now that you have tested your Weather Station, close up the boxes with the long screws and ensure the grommets are in place. 
 
