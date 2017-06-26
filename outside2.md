@@ -1,5 +1,7 @@
 # Installing your Weather Station outside Part II: Using wifi
 
+We've made our weather station easy to assemble and get up and running, but we know that the trickiest part of setting it up can be installing the equipment outdoors. Since every set-up location is different, it is impossible to create a guide to exactly suit everyone. However, this guide is intended to provide some helpful instructions that you can hopefully adapt to meet your particular needs.
+
 This guide focuses on how to connect the weather station kit to a WiFi network so that it can upload its data to online databases.
 
 # Power and internet connectivity
@@ -40,7 +42,7 @@ to display a list of WiFi networks your Pi can see (run this in a Terminal Windo
  First of all, install the Python helper program.
 
    ```bash
-   pip install iw_parse
+   sudo pip install iw_parse
    ```
 
  Then to run a continual feed, run this multi-line command in a Terminal window :
@@ -66,4 +68,10 @@ You will see something like this:
 
  You can also experiment with directional antennae. A small mini-panel can provide large gain but requires more careful adjustment to optimise; due to reflections and other effects, the position with the strongest signal may not always fall on a straight line from the antenna to the transmitter.
 
- If you're feeling particularly creative you could even build a 'cantenna' - a WiFi antenna using an aluminium food can.
+ If you're feeling particularly creative you could even [build a 'cantenna'](http://www.turnpoint.net/wireless/cantennahowto.html) - a WiFi antenna using an aluminium food can.
+
+ ## What Next?
+ Why not try out some of our Weather Station resources on [raspberrypi.org](https://raspberrypi.org) to learn how to access the Oracle Database and play with data from around the world.
+ - [Fetching the Weather](https://www.raspberrypi.org/learning/fetching-the-weather/)
+ - [Graphing the Weather](https://www.raspberrypi.org/learning/graphing-the-weather/)
+ - [Mapping the Weather](https://www.raspberrypi.org/learning/mapping-the-weather/)

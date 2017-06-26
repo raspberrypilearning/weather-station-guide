@@ -11,7 +11,8 @@ Now you are ready to install your Weather Station. Unplug the keyboard, mouse, a
 
 Although we can’t give specific instructions for siting the Station (as the method depends on your particular school and environment), here are some tips for various aspects of the process that should help you get started.
 
-[Installing your weather station outside part 1: Wind sensors](https://www.raspberrypi.org/learning/weather-station-guide/outside1.md)
+[Installing your weather station outside part 1: Wind sensors](outside1.md)
+[Installing your weather station outside part 2: Wifi](outside2.md)
 
 You may not be able to find an ideal location. Perhaps trees block the wind, or the rain gauge is partially sheltered by an overhang.  **Please still install your Weather Station!** You could even use this as a learning opportunity: would it be possible, for example, to take things like reduced rain readings into account automatically? It’s also a great chance to get your students involved in a bit of problem solving and research, and to get other departments in the school involved.
 

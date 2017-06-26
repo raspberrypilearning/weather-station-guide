@@ -1,7 +1,5 @@
 # Installing your Weather Station outside Part I: Wind sensors
 
-The Raspberry Pi weather station is a fantastic kit that we have sent out to nearly one thousand schools across the world. It enables students to make scientific measurements about the climate and upload them to a central Oracle database.
-
 We've made our weather station easy to assemble and get up and running, but we know that the trickiest part of setting it up can be installing the equipment outdoors. Since every set-up location is different, it is impossible to create a guide to exactly suit everyone. However, this guide is intended to provide some helpful instructions that you can hopefully adapt to meet your particular needs.
 
 ## From where the wind blows
@@ -50,3 +48,10 @@ Positioning the instruments a little higher can be cheap and easy: all you need 
    ![](images/wind9.jpg)
 
 ## What Next?
+
+If you haven't worked out how to connect your weather station to a network, why not have a look at at our [guide to using your kit with wifi](outside2.md)?
+
+Or how about tackling some of our Weather Station resources on [raspberrypi.org](https://raspberrypi.org) to learn how to access the Oracle Database and play with data from around the world.
+- [Fetching the Weather](https://www.raspberrypi.org/learning/fetching-the-weather/)
+- [Graphing the Weather](https://www.raspberrypi.org/learning/graphing-the-weather/)
+- [Mapping the Weather](https://www.raspberrypi.org/learning/mapping-the-weather/)

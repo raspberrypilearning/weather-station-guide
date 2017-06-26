@@ -17,11 +17,11 @@ As well as logging data locally, schools that received a free Weather Station ca
 1. [Building your Weather Station Part II](build2.md)
 1. [Testing your Weather Station](test.md)
 1. [Install the Weather Station outside](siting.md)
+1. [Outdoors Installation guide 1: Wind sensors  ](outside1.md)
+1. [Outdoors Installation guide 2: Wifi  ](outside2.md)
 
 ## Resources
 
 - [Sensing the Weather](https://www.raspberrypi.org/learning/sensing-the-weather): a series of cross-curricular lessons exploring measuring, collecting, and analysing weather data in order to predict the weather.
 - [Weather Station web page](https://www.raspberrypi.org/weather-station)
 - Get support (or show off your Weather Station!) on [our forum](https://www.raspberrypi.org/forums/viewforum.php?f=112).
-
-
