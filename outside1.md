@@ -49,6 +49,8 @@ Positioning the instruments a little higher can be cheap and easy: all you need 
 
 ## What Next?
 
+There are loads of other ways you could mount your wind sensors - we'd love to see what you come up with: please share your builds with weather@raspberrypi.org
+
 If you haven't worked out how to connect your weather station to a network, why not have a look at at our [guide to using your kit with wifi](outside2.md)?
 
 Or how about tackling some of our Weather Station resources on [raspberrypi.org](https://raspberrypi.org) to learn how to access the Oracle Database and play with data from around the world.
