@@ -1,10 +1,10 @@
 # Registering your Weather Station
 
-If you have received a Raspberry Pi Weather Station, then your first task will be to register your school and Weather Station on the Raspberry Pi Oracle Database.
+If you have received a Raspberry Pi Weather Station, then your first task will be to register your school and Weather Station on the Raspberry Pi Oracle database.
 
 ## Registering your School
 
-1. Navigate to the [Raspberry Pi Oracle Database](https://apex.oracle.com/pls/apex/f?p=81290:LOGIN_DESKTOP:0:::::&tz=1:00), and click on the **Register** button.
+1. Navigate to the [Raspberry Pi Oracle database](https://apex.oracle.com/pls/apex/f?p=81290:LOGIN_DESKTOP:0:::::&tz=1:00), and click on the **Register** button.
    ![](images/register01.png)
 
 1. Now fill in your details, including your organisation's web address (URL) and whether you permit the Raspberry Pi Foundation to contact you.
@@ -13,7 +13,7 @@ If you have received a Raspberry Pi Weather Station, then your first task will b
 1. You may have to wait up to 24 hours for your registration to go through. Once you have been registered on the database, you will receive an email from us (so keep checking your spam folder, just in case).
    ![](images/register04.png)
 
-1. Now go back to the [Raspberry Pi Oracle Database](https://apex.oracle.com/pls/apex/f?p=81290:LOGIN_DESKTOP:0:::::&tz=1:00) and fill in your school's name and password.
+1. Now go back to the [Raspberry Pi Oracle database](https://apex.oracle.com/pls/apex/f?p=81290:LOGIN_DESKTOP:0:::::&tz=1:00) and fill in your school's name and password.
    ![](images/register05.png)
 
 1. The next page will ask for your activation code, which is the verification code sent to you in the email.
