@@ -1,6 +1,6 @@
-# Setting up the Raspberry Pi Oracle weather station software manually.
+# Setting up the Raspberry Pi Weather Station software manually.
 
-You don't need any prior knowledge to set up the weather station. There are several steps, but the benefit of setting up manually is that you'll learn about the workings of the sensors and the station as you do it. You'll also be introduced to the command line interface, the text editor nano and the MySQL database. It's also a great introduction to Linux.
+You don't need any prior knowledge to set up the Weather Station. There are several steps, but the benefit of setting up manually is that you'll learn about the workings of the sensors and the station as you do it. You'll also be introduced to the command line interface, the text editor nano and the MySQL database. It's also a great introduction to Linux.
 
 
 ## Manual installation
@@ -205,7 +205,7 @@ Now that the sensors are working, we need a database to store the data from them
 
 ## Database setup
 
-Now you'll set up your weather station to automatically log the collected weather data. The data is stored on the Pi's SD card using a database system called MySQL. Once your station is successfully logging data locally, you'll also be able to [upload that data](oracle.md) to a central Oracle Apex database to share it with others. 
+Now you'll set up your Weather Station to automatically log the collected weather data. The data is stored on the Pi's SD card using a database system called MySQL. Once your station is successfully logging data locally, you'll also be able to [upload that data](oracle.md) to a central Oracle Apex database to share it with others. 
 
 ### Install the necessary software packages
 
@@ -290,9 +290,9 @@ git clone https://github.com/raspberrypi/weather-station.git
 
 This will create a new folder in the home directory called `weather-station`.
 
-### Start the weather station daemon and test it
+### Start the Weather Station daemon and test it
 
-A daemon is a process that runs in the background. To start the daemon we need for the weather station, use the following command:
+A daemon is a process that runs in the background. To start the daemon we need for the Weather Station, use the following command:
 
 ```bash
 sudo ~/weather-station/interrupt_daemon.py start
@@ -325,7 +325,7 @@ The following text commands can be used:
 
 Use the `BYE` command to quit.
 
-### Set the weather station daemon to automatically start at boot
+### Set the Weather Station daemon to automatically start at boot
 
 Use the following command to automate the daemon:
 
@@ -371,7 +371,7 @@ You should enable cron to start taking measurements automatically. This is also 
 crontab < crontab.save
 ```
 
-Your weather station is now live and recording data at timed intervals.
+Your Weather Station is now live and recording data at timed intervals.
   
 You can disable data logging mode at any time by removing the crontab with the command below:
   
@@ -430,17 +430,17 @@ Press **Ctrl + D** or type `exit` to quit MySQL.
 
 ## Upload your data to the Oracle Apex database
 
-At this stage, you have a weather station which reads its sensors and stores the data at regular intervals in a database on the SD card. But what if the SD card gets corrupted? How do you backup your data? And how do you share it with the rest of the world?
+At this stage, you have a Weather Station which reads its sensors and stores the data at regular intervals in a database on the SD card. But what if the SD card gets corrupted? How do you backup your data? And how do you share it with the rest of the world?
 
 Oracle has set up a central database to allow all schools in the Weather Station project to upload their data. It is safe there and you can download it in various formats, share it, and even create graphs and reports. Here's how to do it.
 
 ### Register your school
 
-You'll need to [register your school](oracle.md) and add your weather station. Come back here when you have your weather station passcode.
+You'll need to [register your school](oracle.md) and add your Weather Station. Come back here when you have your Weather Station passcode.
 
-### Update credential files with your weather station details
+### Update credential files with your Weather Station details
 
-Add the weather station name and password to the local Oracle credentials file with the commands below. This allows the code that uploads to Oracle to add it to the correct weather station.
+Add the Weather Station name and password to the local Oracle credentials file with the commands below. This allows the code that uploads to Oracle to add it to the correct Weather Station.
 
 ```bash
 cd ~/weather-station
@@ -448,7 +448,7 @@ cd ~/weather-station
 nano credentials.oracle.template
 ```
   
-Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the weather station above. The double quotes `"` enclosing these values in this file are important, so take care not to remove them by mistake. The weather station name must match exactly and is case-sensitive.
+Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the Weather Station above. The double quotes `"` enclosing these values in this file are important, so take care not to remove them by mistake. The Weather Station name must match exactly and is case-sensitive.
   
 Press `Ctrl - O` then `Enter` to save, and `Ctrl - X` to quit nano.
   
@@ -475,6 +475,6 @@ You can download your data in various formats and also make charts using the men
 
 ![](images/wsmenu.png)
 
-## Next steps
+## What next?
 
 - You can now proceed to setting up the rest of the hardware in the [Hardware Setup Section](build2.md)
