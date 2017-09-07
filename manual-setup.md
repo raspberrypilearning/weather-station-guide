@@ -14,7 +14,7 @@ You don't need any prior knowledge to set up the Weather Station. There are seve
 ```bash
 sudo raspi-config
 ```
-    
+
 1. We recommend that you **change your password** using the button underneath.
 
 1. In the Interfaces tab, enable I2C:
@@ -224,9 +224,9 @@ sudo pip3 install mysqlclient
 
 If you make a mistake, use the cursor UP arrow to go back to previous lines for editing.
 
-Please note that this will take some time. You will be prompted to create and confirm a password for the root user of the MySQL database server. Don't forget it, as you'll need it later.
+Please note that this will take some time.
 
-### Create a local database within MySQL
+### Create a local database within MariaDB
 
 Enter the following:
 
@@ -234,10 +234,10 @@ Enter the following:
 sudo mysql
 ```
 
-You'll now be at the MySQL prompt `mysql>`. First create a local database account for the Pi user and assign the necessary privileges. You should also choose a password for this account.
+You'll now be at the MariaDB prompt `MariaDB [(none)]>`. First create a local database account for the Pi user and assign the necessary privileges. You should also choose a password for this account.
 
 ```mysql
-create user pi IDENTIFIED by password;
+create user pi IDENTIFIED by 'password';
 grant all privileges on *.* to 'pi' with grant option;
 ```
 
@@ -255,9 +255,9 @@ Switch to that database:
 USE weather;
 ```
 
-You should see `Database changed`.
+You should see `Database changed`. And your prompt should now be `MariaDB [(weather)]>`.
 
-If MySQL doesn't do anything when it should, you've probably forgotten the final `;`. Just type it in when prompted and press **Enter**.
+If MariaDB doesn't do anything when it should, you've probably forgotten the final `;`. Just type it in when prompted and press **Enter**.
 
 ### Create a table to store the weather data
 
@@ -288,7 +288,7 @@ Type the code below, taking note of the following tips:
 
 You should now see `Query OK, 0 rows affected (0.05 sec)`.
 
-Press `Ctrl - D` or type `exit` to quit MySQL.
+Press `Ctrl - D` or type `exit` to quit MariaDB.
 
 ## Set up the sensor software
 
