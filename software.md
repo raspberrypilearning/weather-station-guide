@@ -31,7 +31,7 @@ There are a few steps involved in setting up the software for the Weather Statio
 
     ![](images/install_01.png)
 
-The first part of the installation is to update any packages that may have been upgraded by their developers since the Raspbian image was built. Note that sometimes during the `update` and `upgrade` process you maybe prompted as to whether you would like certain pieces of software to be installed or certain settings to be changed.
+1. The first part of the installation is to update any packages that may have been upgraded by their developers since the Raspbian image was built. Note that sometimes during the `update` and `upgrade` process you maybe prompted as to whether you would like certain pieces of software to be installed or certain settings to be changed.
 
 1. When prompted, type **y** if the time displayed is correct.
 
