@@ -18,7 +18,12 @@ There are a few steps involved in setting up the software for the Weather Statio
     sudo raspi-config
     ```
 
+    ![](images/ssh_01.png)
+
 1. Now enable [Secure Shell access](https://www.raspberrypi.org/blog/ssh-shenanigans/) from the "Interfacing Options" menu. This will allow you to remotely login to your Pi via the network. In this way you can work on your Pi Weather Station without having a monitor, keyboard and mouse attached.
+
+
+    ![](images/ssh_02.png)
 
 
 1. Once Raspbian has been updated, it's time to install the Weather Station software. Type (or copy and paste) the following line into the terminal window.
