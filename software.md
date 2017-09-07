@@ -20,7 +20,6 @@ There are a few steps involved in setting up the software for the Weather Statio
 
 1. Now enable [Secure Shell access](https://www.raspberrypi.org/blog/ssh-shenanigans/) from the "Interfacing Options" menu. This will allow you to remotely login to your Pi via the network. In this way you can work on your Pi Weather Station without having a monitor, keyboard and mouse attached.
 
-  **Note that sometimes during the `update` and `upgrade` process you maybe prompted as to whether you would like certain pieces of software to be installed or certain settings to be changed.**
 
 1. Once Raspbian has been updated, it's time to install the Weather Station software. Type (or copy and paste) the following line into the terminal window.
 
@@ -28,30 +27,27 @@ There are a few steps involved in setting up the software for the Weather Statio
 	bash <(wget -O- https://gist.githubusercontent.com/MarcScott/a843c4dd4dfa3934b3de7b1fc0beadf8/raw/e65fd1c178202cf4ad8d4361ed5dcc1eeb2bb8d5/weather_install.sh)
 	```
 
-1. You can now proceed through the installation process.
+1. You can now proceed through the installation process. When prompted, press **y** to continue.
 
-    - When prompted, press any key to continue.
     ![](images/install_01.png)
 
 The first part of the installation is to update any packages that may have been upgraded by their developers since the Raspbian image was built.
 
   **Note that sometimes during the `update` and `upgrade` process you maybe prompted as to whether you would like certain pieces of software to be installed or certain settings to be changed.**
 
-
-
     - When prompted, type **y** if the time displayed is correct.
-	![](images/install_02.png)
+    ![](images/install_02.png)
 
 	- If the time is incorrect, type **n** and then enter the correct time in the format `yyyy-mm-dd hh:mm:ss`.
-	![](images/install_03.png)
+    ![](images/install_03.png)
 
 	- Next you will need to choose a database password. It can be anything you like, as it is the password for the local database on your Raspberry Pi. Write the password down somewhere so you do not forget it.
-	![](images/install_04.png)
+    ![](images/install_04.png)
 
 	- The MariaDB packages will now be installed. This will provide a local database on your Pi for storing your weather data.
-    
+
     - Next you need to type in the Weather Station name and password/key that you learned when you registered your Weather Station.
-	![](images/install_05.png)
+    ![](images/install_05.png)
 
 1. Once the install has finished, your Raspberry Pi should reboot. You can now proceed to setting up the rest of the hardware.
 
