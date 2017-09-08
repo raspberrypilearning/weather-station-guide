@@ -1,21 +1,21 @@
-# introduction
+# Introduction
 
-The Weather Station software has two main elements. The first is the collection of drivers and scripts that are needed to communicate with the various weather sensors. The second is the local MariaDB database that is used to store all the data produced by the sensors. This is regularly uploaded to our online Oracle database so that it can be analysed and compared with all the other Weather Stations from around the world.
+The Weather Station software has two main elements. The first is the collection of drivers and scripts that are needed to communicate with the various weather sensors. The second is the local MariaDB database that is used to store all the data produced by the sensors. This data is regularly uploaded to our online Oracle database so that it can be analysed and compared with all the other Weather Stations from around the world.
 
 # Weather Station software setup
 
 There are a few steps involved in setting up the software for the Weather Station.  Before beginning this section, please ensure that you have [registered your School and Weather Station on the Oracle database](register.md).
 
-The entire software installation process can take a while, especially if you have a slow Internet connection. If you're planning to carry out the installation as part of a lesson or club, you should make sure you have downloaded the Raspbian operating system (Step 1) and burned the SD card **before** the session.
+The entire software installation process can take a while, especially if you have a slow Internet connection. If you're planning to carry out the installation as part of a lesson or club, you should make sure you have downloaded the Raspbian operating system (Step 2 below) and burned the SD card **before** the session.
 
 ## Getting the latest Raspberry Pi OS
-1. The SD card that comes with the Weather Station kit contains a version of Raspbian, the Raspberry Pi operating system which is now extremely out-of-date and should not be used.
+1. The SD card that comes with the Weather Station kit contains a version of Raspbian, the Raspberry Pi operating system, which is now extremely out-of-date and should not be used.
 
-1. Follow the [guide on the Raspberry Pi website](https://www.raspberrypi.org/learning/software-guide/) which tells you how to install the latest version of Raspbian. You can use the full Desktop version or the slimmer 'Lite' one. The latter is a smaller download as it does *not* include LibreOffice, Wolfram and many other packages which are not required for operation of the Weather Station. However it is command-line only and therefore all configuration is performed through this interface.  
+1. Follow the [guide on the Raspberry Pi website](https://www.raspberrypi.org/learning/software-guide/) which tells you how to install the latest version of Raspbian. You can use the full Desktop version or the slimmer 'Lite' one. The latter is a smaller download as it does *not* include LibreOffice, Wolfram and many other packages which are not required for operation of the Weather Station. However it is command-line only and therefore all configuration is performed through this interface (i.e no GUI).  
 
 ## Setting up the Weather Station software.
 
-1. The simplest way to set up the software up is to use our one-line install script. If you wish to proceed manually through the steps, then you can follow [this guide](manual-setup.md), but this is only recommended if you're confident using the command line interface, enjoy unnecessary typing, or want to make custom adjustments to your setup.
+1. The simplest way to start the software installation process up is to use our one-line install script. If you wish to proceed manually through the steps, then you can follow [this guide](manual-setup.md), but this is only recommended if you're confident using the command line interface, enjoy unnecessary typing, or want to make custom adjustments to your setup.
 
 1. When Raspbian boots up, press **Ctrl** and **Alt** and the character **t** on your keyboard. This will open up a Terminal window. [Desktop Raspbian only]
 
@@ -60,11 +60,11 @@ It is normally fine to accept the default answer, but always read the request ca
 
 1. The MariaDB packages will now be installed. This will provide the local database on your Pi for storing your weather data.
 
-1. Next you need to type in the Weather Station name and password/key that you obtained when you [registered] (https://www.raspberrypi.org/learning/weather-station-guide/register.md) your Weather Station with the online Oracle database.
+1. Next you need to type in the Weather Station name and password/key that you obtained when you [registered](https://www.raspberrypi.org/learning/weather-station-guide/register.md) your Weather Station with the online Oracle database.
 
     ![](images/install_05.png)
 
-1. That's it. Once the install has finished, your Raspberry Pi should reboot. You can now proceed to setting up the rest of the hardware if you have not already sone so.
+1. That's it. Once the install has finished, your Raspberry Pi should reboot. 
 
 ## What next?
 

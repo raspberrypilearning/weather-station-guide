@@ -5,7 +5,7 @@ You don't need any prior knowledge to set up the Weather Station. There are seve
 
 ## Manual installation
 
-1.  Start with a fresh install of the latest version of [Raspbian](https://www.raspberrypi.org/downloads/raspbian/). You can either use the full Desktop version, on the slimmer 'lite' version. The latter requires that all work is performed on the command line.
+1.  Start with a fresh install of the latest version of [Raspbian](https://www.raspberrypi.org/downloads/raspbian/). You can either use the full Desktop version, or the slimmer 'lite' version.
 
 1.  When booting for the first time, you will be presented with the desktop (or a login prompt if you're using the 'lite' version).
 
