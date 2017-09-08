@@ -15,7 +15,7 @@ You don't need any prior knowledge to set up the Weather Station. There are seve
 sudo raspi-config
 ```
 
-1. We recommend that you **change your password** using the button underneath.
+1. We recommend that you **change your password**.
 
 1. In the Interfaces tab, enable I2C:
 
@@ -25,7 +25,7 @@ sudo raspi-config
 
 ## Setting up the real-time clock
 
-We'll be doing most of the work from the command line. Open a terminal window, using the icon on the menu bar or pressing `ctrl`+`alt`+`t`.
+We'll be doing most of the work from the command line. If you're using the Desktop version, open a terminal window, using the icon on the menu bar or pressing `ctrl`+`alt`+`t`.
 
    ![](images/terminal.png)
 
