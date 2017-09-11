@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Weather Station software has two main elements. The first is the collection of drivers and scripts that are needed to communicate with the various weather sensors. The second is the local MariaDB database that is used to store all the data produced by the sensors. This data is regularly uploaded to our online Oracle database so that it can be analysed and compared with all the other Weather Stations from around the world. There are three ways to install the software.
+The Weather Station software has two main elements. The first is the collection of drivers and scripts that are needed to communicate with the various weather sensors. The second is the local MariaDB database that is used to store all the data produced by the sensors. This data is regularly uploaded to our online Oracle database so that it can be analysed and compared with all the other Weather Stations from around the world.
 
 Before continuing, please ensure that you have [registered your School and Weather Station on the Oracle database](register.md).
 
@@ -10,12 +10,15 @@ The entire software installation process can take a while, especially if you hav
 
 There are three ways to install the software. Each has its advantages and disadvantages. We recommend that you read through each before deciding which one is best for you.
 
-
 ## Method 1: Pre-built SD card image
 
 In some ways this is the easiest method. However there are some disadvantages:
 - The image will not be updated for every new Raspbian release so the update/upgrade process (step 2) may take longer.
 - Any hardware problems may be much harder to diagnose. Using either of the other methods is much more likely to reveal individual errors and make them simpler to correct. If you contact Weather Station support with problems having used the pre-built image, you will probably be asked to try again using the more manual methods.
+- The image is intended to be run on a Raspberry Pi 2 (the model that shipped with the kit) or a Pi 3. If you're using something else (an older Pi or a Pi Zero), it will not work without some tinkering.
+- The image is based on the stripped-down 'lite' build of Raspbian. Therefore it does not have any graphical software such as LibreOffice installed and all configuration (e.g. connecting to a wifi network) will have to be performed using the command line and by editing text files.  
+
+To use the image, do the following:
 
 1. Download the [Weather Station image](https://downloads.raspberrypi.org/weather_station/images/weather_station-2016-03-24/) and [burn it](https://www.raspberrypi.org/learning/software-guide/) to your SD card.
 
@@ -86,9 +89,9 @@ It is normally fine to accept the default answer, but always read the request ca
 
 1. That's it. Once the install has finished, your Raspberry Pi should reboot.
 
-## Method 3: Manual step-by-step install
+## Method 3: Manual step-by-step installation
 
-1. Although the simplest way perform the software installation process is to use our one-line install script, the benefit of setting it up manually is that you'll learn about the workings of the sensors and the station as you do it. If you wish to proceed manually through the steps, then you can follow [this guide](manual-setup.md). Note that this is only recommended if you're confident using the command line interface, or want to make custom adjustments to your setup.
+1. Although the simplest way perform the software installation process is to use our one-line install script, the benefit of setting it up manually is that you'll learn about the workings of the sensors and the station as you do it. If you wish to proceed manually through the steps, then you can follow [this guide](manual-setup.md). Note that this is only recommended if you're happy using the command line interface, or want to make custom adjustments to your setup.
 
 ## What next?
 
