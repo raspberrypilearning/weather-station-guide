@@ -33,7 +33,11 @@ To use the image, do the following:
     ```bash
     sudo raspi-config
     ```
-then select 'Advanced Options' followed by 'Expand Filesystem'.
+    ![](images/install_06.png)
+
+1. Then select 'Advanced Options' followed by 'Expand Filesystem'.
+
+    ![](images/install_07.png)
 
 1. Make sure all the sensors are connected and begin the [testing procedures](https://github.com/topshed/weather-station-guide/blob/master/test.md).
 
