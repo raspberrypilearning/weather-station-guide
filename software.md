@@ -22,13 +22,20 @@ To use the image, do the following:
 
 1. Download the [Weather Station image](https://downloads.raspberrypi.org/weather_station/images/weather_station-2016-03-24/) and [burn it](https://www.raspberrypi.org/learning/software-guide/) to your SD card.
 
-2. Connect the Pi to the Internet. Login with the standard username and password (pi/raspberry) and run
+1. Connect the Pi to the Internet. Login with the standard username and password (pi/raspberry) and run
 
     ```bash
     sudo sudo apt-get update && sudo apt-get upgrade -y
     ```
+1. Modify the **credentials.oracle** file in the weather-station directory and replace ‘*blank*’s with your Oracle database Weather Station name and passcode.
 
-3. Make sure all the sensors are connected and begin the [testing procedures](https://github.com/topshed/weather-station-guide/blob/master/test.md).
+1. In order to ensure that you don't rapidly run out of disk space, run:
+    ```bash
+    sudo raspi-config
+    ```
+then select 'Advanced Options' followed by 'Expand Filesystem'.
+
+1. Make sure all the sensors are connected and begin the [testing procedures](https://github.com/topshed/weather-station-guide/blob/master/test.md).
 
 ## Method 2: One-line installer
 
