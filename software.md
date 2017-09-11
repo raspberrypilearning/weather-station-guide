@@ -28,7 +28,7 @@ To use the image, do the following:
     sudo sudo apt-get update && sudo apt-get upgrade -y
     ```
 
-3. Make sure all the sensors are connected and begin the [testing procedures]()https://github.com/topshed/weather-station-guide/blob/master/test.md.
+3. Make sure all the sensors are connected and begin the [testing procedures](https://github.com/topshed/weather-station-guide/blob/master/test.md).
 
 ## Method 2: One-line installer
 
