@@ -8,11 +8,11 @@ Before continuing, please ensure that you have [registered your School and Weath
 
 The entire software installation process can take a while, especially if you have a slow Internet connection. If you're planning to carry out the installation as part of a lesson or club, it is probably a good idea to download everything you need (especially SD card images), burn the SD card and perform any software updates **before** the session.
 
-There are three ways to install the software. Each has its advantages and disadvantages. We recommend that you read through each before deciding which one is best for you.
+There are three ways to install the software. Each has its advantages and disadvantages. We recommend that you read through each method before deciding which one is best for you.
 
 ## Method 1: Pre-built SD card image
 
-In some ways this is the easiest method. However there are some disadvantages:
+In some ways this is the easiest method, however there are some disadvantages:
 - The image will not be updated for every new Raspbian release so the update/upgrade process (step 2) may take longer.
 - Any hardware problems may be much harder to diagnose. Using either of the other methods is much more likely to reveal individual errors and make them simpler to correct. If you contact Weather Station support with problems having used the pre-built image, you will probably be asked to try again using the more manual methods.
 - The image is intended to be run on a Raspberry Pi 2 (the model that shipped with the kit) or a Pi 3. If you're using something else (an older Pi or a Pi Zero), it will not work without some tinkering.
@@ -45,9 +45,9 @@ To use the image, do the following:
 
 ### Getting the latest Raspberry Pi OS
 
-1. The SD card that was originally shipped with the Weather Station kit contains a version of Raspbian, the Raspberry Pi operating system, which is now extremely out-of-date and should not be used.
+1. The SD card that was originally shipped with the Weather Station kit contains a version of Raspbian, the Raspberry Pi operating system, which is now extremely out of date and should not be used.
 
-1. Follow the [guide on the Raspberry Pi website](https://www.raspberrypi.org/learning/software-guide/) which tells you how to install the latest version of Raspbian. You can use the full Desktop version or the slimmer 'Lite' one. The latter is a smaller download as it does *not* include LibreOffice, Wolfram and many other packages which are not required for operation of the Weather Station. However it is command-line only and therefore all configuration is performed through this interface (i.e no GUI).  
+1. Follow the [guide on the Raspberry Pi website](https://www.raspberrypi.org/learning/software-guide/) which tells you how to install the latest version of Raspbian. You can use the full Desktop version or the slimmer 'Lite' one. The latter is a smaller download as it does *not* include LibreOffice, Wolfram and many other packages which are not required for operation of the Weather Station. However, it is command-line only, and therefore all configuration is performed through this interface. There is no GUI.  
 
 ### Setting up the Weather Station software.
 
@@ -102,7 +102,7 @@ It is normally fine to accept the default answer, but always read the request ca
 
 ## Method 3: Manual step-by-step installation
 
-1. Although the simplest way perform the software installation process is to use our one-line install script, the benefit of setting it up manually is that you'll learn about the workings of the sensors and the station as you do it. If you wish to proceed manually through the steps, then you can follow [this guide](manual-setup.md). Note that this is only recommended if you're happy using the command line interface, or want to make custom adjustments to your setup.
+1. Although the simplest way to perform the software installation process is to use our one-line install script, the benefit of setting it up manually is that you'll learn about the workings of the sensors and the station as you do it. If you wish to proceed manually through the steps, then you can follow [this guide](manual-setup.md). Note that this is only recommended if you're happy using the command line interface, or want to make custom adjustments to your setup.
 
 ## What next?
 
