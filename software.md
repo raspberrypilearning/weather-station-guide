@@ -20,7 +20,7 @@ In some ways this is the easiest method, however there are some disadvantages:
 
 To use the image, do the following:
 
-1. Download the [Weather Station image](https://downloads.raspberrypi.org/weather_station/images/weather_station-2016-03-24/) and [burn it](https://www.raspberrypi.org/learning/software-guide/) to your SD card.
+1. Download the [Weather Station image](http://downloads.raspberrypi.org/weather_station/images/weather_station-2017-09-13/2017-09-weather-station.zip) and [burn it](https://www.raspberrypi.org/learning/software-guide/) to your SD card.
 
 1. Connect the Pi to the Internet. Login with the standard username and password (pi/raspberry) and run
 
