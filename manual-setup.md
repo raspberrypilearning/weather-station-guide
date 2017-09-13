@@ -9,7 +9,7 @@ You don't need any prior knowledge to set up the Weather Station. There are seve
 
 1.  When booting for the first time, you will be presented with the desktop (or a login prompt if you're using the 'lite' version).
 
-1.  If you're using the Desktop versions, from the Menu button on the top-left, choose `Preferences` > `Raspberry Pi Configuration`. Otherwise login and type
+1.  If you're using the Desktop version, from the Menu button in the top left-hand corner choose `Preferences` > `Raspberry Pi Configuration`. Otherwise log in and type
 
 ```bash
 sudo raspi-config
@@ -21,11 +21,11 @@ sudo raspi-config
 
     ![](images/i2c.png)
 
-1. A reboot dialogue will appear. Select "Yes".
+1. A reboot dialogue will appear. Select Yes.
 
 ## Setting up the real-time clock
 
-We'll be doing most of the work from the command line. If you're using the Desktop version, open a terminal window, using the icon on the menu bar or pressing `ctrl`+`alt`+`t`.
+We'll be doing most of the work from the command line. If you're using the Desktop version, open a terminal window using the icon on the menu bar or by pressing `ctrl`+`alt`+`t`.
 
    ![](images/terminal.png)
 
@@ -66,7 +66,7 @@ dtoverlay=w1-gpio
 dtoverlay=pcf8523-rtc
 ```
 
-Press **Ctrl + O** then **Enter** to save, and **Ctrl + X** to quit nano.
+Press `Ctrl`+`O` then Enter to save, and `Ctrl`+`X` to quit nano.
 
 Now set the required modules to load automatically on boot:
 
@@ -81,7 +81,7 @@ i2c-dev
 w1-therm
 ```
 
-Press **Ctrl + O** then **Enter** to save, and **Ctrl + X** to quit nano.
+Press `Ctrl`+`O` then Enter to save, and `Ctrl`+`X` to quit nano.
 
 For the next steps, we need the Weather Station HAT to be connected to the Raspberry Pi:
 
@@ -105,13 +105,13 @@ You should see something like `/dev/rtc0`.
 
 ## Initialise the RTC with the correct time
 
-Use the `date` command to check the current system time is correct. If it's correct, then you can set the RTC time from the system clock with the following command:
+Use the `date` command to check that the current system time is correct. If it's correct, then you can set the RTC time from the system clock with the following command:
 
 ```bash
 sudo hwclock -w
 ```
 
-If not, then you can set the RTC time manually using the command below (you'll need to change the `--date` parameter, as this example will set the date to the 1st of January 2014 at midnight):
+If not, you can set the RTC time manually using the command below (you'll need to change the `--date` parameter, as this example will set the date to the 1st of January 2014 at midnight):
 
 ```bash
 sudo hwclock --set --date="yyyy-mm-dd hh:mm:ss" --utc
@@ -155,7 +155,7 @@ else
 fi
 ```
 
-Press **Ctrl + O** then **Enter** to save, and **Ctrl + X** to quit nano.
+Press `Ctrl`+`O` then Enter to save, and `Ctrl`+`X` to quit nano.
 
 ## Remove the fake hardware clock package
 
@@ -206,7 +206,7 @@ You should see output similar to this:
 
 Note: `40`, `77` and `6a` will only show if you have connected the **AIR** board to the main board.
 
-Now that the sensors are working, we need a database to store the data from them.
+Now that the sensors are working, we need a database to store the data they produce.
 
 ## Database setup
 
@@ -234,7 +234,7 @@ Enter the following:
 sudo mysql
 ```
 
-You'll now be at the MariaDB prompt `MariaDB [(none)]>`. First create a local database account for the Pi user and assign the necessary privileges. You should also choose a password for this account.
+You will now be at the MariaDB prompt `MariaDB [(none)]>`. First, create a local database account for the Pi user and assign the necessary privileges. You should also choose a password for this account.
 
 ```mysql
 create user pi IDENTIFIED by 'password';
@@ -255,17 +255,17 @@ Switch to that database:
 USE weather;
 ```
 
-You should see `Database changed`. And your prompt should now be `MariaDB [(weather)]>`.
+You should see `Database changed`, and your prompt should now be `MariaDB [(weather)]>`.
 
-If MariaDB doesn't do anything when it should, you've probably forgotten the final `;`. Just type it in when prompted and press **Enter**.
+If MariaDB doesn't do anything when it should, you've probably forgotten the final `;`. Just type it in when prompted and press Enter.
 
 ### Create a table to store the weather data
 
 Type the code below, taking note of the following tips:
 
-- Don't forget the commas at the end of the row.
-- Use the cursor UP arrow to copy and edit a previous line, as many are similar.
-- Type the code carefully and **exactly** as written, otherwise things will break later.
+- Don't forget the commas at the end of the row
+- Use the cursor UP arrow to copy and edit a previous line, as many are similar
+- Type the code carefully and **exactly** as written, otherwise things will break later
 - Use CAPS LOCK!
 
 ```
@@ -288,7 +288,7 @@ Type the code below, taking note of the following tips:
 
 You should now see `Query OK, 0 rows affected (0.05 sec)`.
 
-Press `Ctrl - D` or type `exit` to quit MariaDB.
+Press `Ctrl`+`D` or type `exit` to quit MariaDB.
 
 ## Set up the sensor software
 
@@ -311,7 +311,7 @@ sudo ~/weather-station/interrupt_daemon.py start
 
 You should see something like `PID: 2345` (your number will be different).
 
-A continually running process is required to monitor the rain gauge and the anemometer. These are reed switch sensors and the code uses interrupt detection. These interrupts can occur at any time, as opposed to the timed measurements of the other sensors. You can use the **telnet** program to test or monitor it, with the following command:
+A continually running process is required to monitor the rain gauge and the anemometer. These are reed switch sensors, and the code uses interrupt detection. These interrupts can occur at any time, as opposed to the timed measurements of the other sensors. You can use the **telnet** program to test or monitor the daemon, with the following command:
 
 ```bash
 telnet localhost 49501
@@ -352,7 +352,7 @@ echo "Starting Weather Station daemon..."
 /home/pi/weather-station/interrupt_daemon.py start
 ```
 
-Press `Ctrl - O` then `Enter` to save, and `Ctrl - X` to quit nano.
+Press `Ctrl`+`O` then `Enter` to save, and `Ctrl`+`X` to quit nano.
 
 ### Update the MySQL credentials file
 
@@ -370,7 +370,7 @@ nano credentials.mysql
 
 Change the password field to the password you chose during installation of MySQL. The double quotes `"` enclosing the values are important, so take care not to remove them by mistake.
 
-Press **Ctrl + O** then **Enter** to save, and **Ctrl + X** to quit nano.
+Press `Ctrl`+`O` then Enter to save, and `Ctrl`+`X` to quit nano.
 
 ## Automate updating of the database
 
@@ -406,7 +406,7 @@ You can manually cause a measurement to be taken at any time with the following 
 sudo ~/weather-station/log_all_sensors.py
 ```
 
-Don't worry if you see `Warning: Data truncated for column X at row 1`: this is expected.
+Don't worry if you see `Warning: Data truncated for column X at row 1` – this is expected.
 
 
 ### View the data in the database
@@ -437,13 +437,13 @@ After a lot of measurements have been recorded, it will be sensible to use the S
 SELECT * FROM WEATHER_MEASUREMENT WHERE CREATED > '2014-01-01 12:00:00';
 ```
 
-Press **Ctrl + D** or type `exit` to quit MySQL.
+Press `Ctrl`+`D` or type `exit` to quit MySQL.
 
 ## Upload your data to the Oracle Apex database
 
-At this stage, you have a Weather Station which reads its sensors and stores the data at regular intervals in a database on the SD card. But what if the SD card gets corrupted? How do you backup your data? And how do you share it with the rest of the world?
+At this stage, you have a Weather Station which reads its sensors and stores the data at regular intervals in a database on the SD card. But what if the SD card gets corrupted? How do you back up your data? And how do you share it with the rest of the world?
 
-Oracle has set up a central database to allow all schools in the Weather Station project to upload their data. It is safe there and you can download it in various formats, share it, and even create graphs and reports. Here's how to do it.
+Oracle has set up a central database to allow all schools in the Weather Station project to upload their data. It is safe there, and you can download it in various formats, share it, and even create graphs and reports. Here's how to do it.
 
 ### Register your school
 
@@ -461,7 +461,7 @@ nano credentials.oracle.template
 
 Replace the `name` and `key` parameters with the `Weather Station Name` and `Passcode` of the Weather Station above. The double quotes `"` enclosing these values in this file are important, so take care not to remove them by mistake. The Weather Station name must match exactly and is case-sensitive.
 
-Press `Ctrl - O` then `Enter` to save, and `Ctrl - X` to quit nano.
+Press `Ctrl`+`O` then `Enter` to save, and `Ctrl`+`X` to quit nano.
 
 Rename the Oracle credentials template file to enable it:
 
